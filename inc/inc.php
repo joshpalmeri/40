@@ -43,13 +43,15 @@
     /* Page Include Controls */
     $page_header       = true;                  //Defines if $header is included on page        default true
     $page_footer       = true;                  //Defines if footer is included on page         default true
-    $page_to_top       = true;                  //Defines if $to_top is included on page        default true
     $page_loader       = false;                 //Defines if $page_loader is included on page   default false
 
     /* Javascript Libraries */
     $fastclick_js       = true;                 //Defines if fastclick.js is included to remove 300ms delay from mobile clicks
     $fittext_js         = true;                 //Defines if fastclick.js is included to remove 300ms delay from mobile clicks
 
+    /* Totop Controls */
+    $page_to_top        = true;                 //Defines if $to_top is included on page        default true
+                                                //speed defined in plugins.js click listener
 
     /* Default Scroll Controls */
     $page_scroll        = true;                  
@@ -58,10 +60,10 @@
 
     
     /* Sticky Element Controls */
-    $sticky_element          = true;           //Defines whether there is a sticky element
+    $sticky_element          = true;            //Defines whether there is a sticky element
     $sticky_element_selector = '".sticky"';     //Define selector for element(s) that should be sticky. Needs ".quotes"
 
     /* Display Configurations, Default Highlights */
-    $main_nav_selected = 0;    //Index of selected nav item. Default is the first one.
+    $main_nav_selected  = 0;                    //Index of selected nav item. Default is the first one.
 
 ?>
