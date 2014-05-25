@@ -13,9 +13,7 @@
     $header          = "header.php";            //header php file
     $site_nav        = "site-nav.php";          //nav php file
     $footer          = "footer.php";            //footer php file
-
     $to_top          = "to-top.php";            //php file for to-top link
-    $to_top          = "to-top.php";            //footer php file
 
 
     /* Meta Variables Defaults */
@@ -25,7 +23,7 @@
     $page_description  = '';                    //meta description
     $page_keywords     = '';                    //meta keywords
     $page_title_sub    = '';                    //meta sub title
-    $page_title_full   = $page_title . '|' . 
+    $page_title_full   = $page_title . ' | ' . 
                          $page_title_sub;       //full meta title, format 'Title | Subtitle'
 
     $detect_phone_num  = false;                 //format-detection for telephone number
