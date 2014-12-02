@@ -1,0 +1,130 @@
+/* 
+   File: term-definitions-grid-1024.css
+   Created by: Josh Palmeri, joshpalmeri.com
+   2014.11.08
+   As a part of dayspringdanceministries.com/about/vision
+
+   Add on to term-definitions-grid.css to add a desktop box-view
+
+   Dependencies:
+    term-definitions-grid.css
+*/
+
+@media only screen and (min-width: 1024px) {
+    .term-definitions-grid {
+        border-radius: 10px;
+    }
+    .term-definitions-grid li {
+        display: table;
+        width: 33.333%;
+        float: left;
+        border-bottom: 0 none;
+        position: relative;
+        cursor: pointer;
+        height: 280px;
+        text-align: center;
+        border-right: 1px solid #6c92be;
+        border-left: 1px solid #6c92be;
+        border-bottom: 2px solid #6c92be;
+        background: rgba(0,0,0,.075);
+    }
+    .term-definitions-grid li.top-left,
+    .term-definitions-grid li.top-left .callout {
+        border-top-left-radius: 10px;
+    }
+    .term-definitions-grid li.top-right,
+    .term-definitions-grid li.top-right .callout {
+        border-top-right-radius: 10px;
+    }
+    .term-definitions-grid li.bottom-left,
+    .term-definitions-grid li.bottom-left .callout {
+        border-bottom-left-radius: 10px;
+    }
+    .term-definitions-grid li.bottom-right,
+    .term-definitions-grid li.bottom-right .callout {
+        border-bottom-right-radius: 10px;
+    }
+    .term-definitions-grid li.double {
+        width: 66.65%;
+    }
+    .term-definitions-grid li .term {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .term-definitions-grid li > .term {
+        font-size: 4.4em;
+    }
+    .term-definitions-grid li.active > .term {
+        opacity: 1;
+    }
+    .term-definitions-grid li:hover > .term,
+    .term-definitions-grid li.active > .term {
+        opacity: 0;
+    }
+        .term-definitions-grid li .callout {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,.35);
+            padding: 20px;
+            opacity: 0;
+            color: #b6d2f2;
+        }
+        .term-definitions-grid li:hover .callout {
+            opacity: .8;
+        }
+        .term-definitions-grid li.active .callout {
+            opacity: .95;
+            color: #c4e7fa;
+        }
+            .term-definitions-grid li .callout .arrow {
+                display: none;
+            }
+            .term-definitions-grid li .callout .term {
+                display: block;
+                font-size: 3em;
+                padding: 0 0 20px;
+                margin: 0 0 20px;
+                border-bottom: 1px solid #6c92be;
+            }
+            .term-definitions-grid li .callout .definition {
+                display: block;
+                width: 100%;
+                padding: 0;
+                font-size: 1.7em;
+            }
+    .term-definitions-grid li.double {
+        display: table !important;
+        position: relative;
+    }
+    .term-definitions-grid li.double .term {
+        font-family: 'Satisfy', Georgia, serif;
+        text-transform: none;
+        font-size: 2.8em;
+        font-style: normal;
+        font-size: 6.2em;
+        text-align: center;
+        display: table-cell;
+        opacity: .2;
+        color: #b6d2f2;
+        cursor: default;
+        text-shadow: 0 0 3px #000;
+
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+    }
+
+}
+
+@media only screen and (min-width: 1140px) {
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+}

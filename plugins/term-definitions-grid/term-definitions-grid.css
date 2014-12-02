@@ -1,0 +1,192 @@
+/* 
+   File: term-definitions-grid.css
+   Created by: Josh Palmeri, joshpalmeri.com
+   2014.11.08
+   As a part of dayspringdanceministries.com/about/vision
+
+   Dependencies:
+    <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Satisfy|Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href="fonts/font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet">
+*/
+
+ul.term-definitions-grid {
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+    margin: 40px 0;
+    border-top: 1px solid #6c92be;
+    overflow: hidden;
+}
+
+    .term-definitions-grid li {
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        border-bottom: 1px solid #6c92be;
+        position: relative;
+        cursor: pointer;
+    }
+
+        .term-definitions-grid li .term {
+            font-family: 'Rosario', arial, sans-serif;
+            font-style: italic;
+            font-size: 1.8em;
+            display: block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 25px 15px;
+
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        .term-definitions-grid li.active > .term {
+            opacity: .2;
+        }
+
+        .term-definitions-grid li .callout {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -85%;
+            bottom: 0;
+            left: 85%;
+            background: rgba(0,0,0,.35);
+
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        .term-definitions-grid li:hover .callout {
+            background: rgba(0,0,0,.45);
+        }
+
+        .term-definitions-grid li.active .callout {
+            background: rgba(0,0,0,.45);
+            left: 0;
+            right: 0;
+        }
+
+            .term-definitions-grid li .callout .term {
+                font-family: 'Rosario', arial, sans-serif;
+                font-style: italic;
+                font-size: 1em;
+                display: block;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                width: auto;
+                padding: 0;
+                display: none;
+            }
+
+            .term-definitions-grid li .callout .arrow {
+                display: inline-block;
+                float: left;
+                width: 15%;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                font-size: 4.4em;
+                line-height: 0;
+                text-align: center;
+                height: 100%;
+                padding: 8px 0 0;
+            }
+
+            .term-definitions-grid li.active .callout .arrow {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+            }
+
+            .term-definitions-grid li .callout .definition {
+                font-family: 'Enriqueta', Georgia, serif;
+                font-weight: 400;
+                font-size: .95em;
+                font-style: normal;
+                display: table;
+                float: left;
+                width: 85%;
+                height: 100%;
+                padding: 0 7px 2px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .term-definitions-grid li .callout .definition span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+/* Media Queries */
+@media only screen and (min-width: 0px) and (max-width: 959px) {
+    
+}
+
+@media only screen and (min-width: 400px) {
+    .term-definitions-grid li .callout .definition {
+        font-size: 1.15em;
+    }
+    .term-definitions-grid li .term {
+        font-size: 1.95em;
+        padding: 28px 15px;
+    }
+    .term-definitions-grid li .callout .arrow {
+        padding: 14px 0 0;
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    .term-definitions-grid li .callout .definition {
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    
+}
+
+@media only screen and (min-width: 680px) {
+    .term-definitions-grid li .callout .definition {
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (min-width: 740px) {
+    
+}
+
+@media only screen and (min-width: 860px) {
+    
+}
+
+@media only screen and (min-width: 960px) {
+    
+}
+
+@media only screen and (min-width: 1024px) {
+    
+}
+
+@media only screen and (min-width: 1140px) {
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+}

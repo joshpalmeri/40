@@ -5,7 +5,7 @@
     $inc_loc     = 'inc/';                          //location for php includes
     $path        = $root . '/' . $site . $inc_loc;  //construct the path for php includes
 
-    $site_domain = 'http://localhost:8888/';    //change to URL when going live
+    $site_domain = 'http://localhost/';    //change to URL when going live
 
     $content     = "content/";                  //directory for php content
         $test    = "test/";                     //custom directory variables
@@ -14,6 +14,7 @@
     $site_nav        = "site-nav.php";          //nav php file
     $footer          = "footer.php";            //footer php file
     $to_top          = "to-top.php";            //php file for to-top link
+    $global          = "global.php";            //header php file
 
 
     /* Meta Variables Defaults */
