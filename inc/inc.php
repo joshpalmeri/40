@@ -46,7 +46,7 @@
 
     /* Javascript Libraries */
     $fastclick_js       = true;                 //Defines if fastclick.js is included to remove 300ms delay from mobile clicks
-    $fittext_js         = true;                 //Defines if fastclick.js is included to remove 300ms delay from mobile clicks
+    $fittext_js         = true;                 //Defines if fittext.js is included to resize text relative to its container's width
 
     /* Totop Controls */
     $page_to_top        = true;                 //Defines if $to_top is included on page        default true
@@ -64,5 +64,10 @@
 
     /* Display Configurations, Default Highlights */
     $main_nav_selected  = 0;                    //Index of selected nav item. Default is the first one.
+
+    /* Cache busting for newer asset files */
+    $filename_based_cache_busting = true;
+    
+    include $path . 'includes/filename_based_cache_busting.php';
 
 ?>
