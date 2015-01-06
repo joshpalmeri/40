@@ -36,11 +36,10 @@
 
     <!--BEGIN main CSS Includes-->
         <link rel="stylesheet" href="css/vendor/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/nav.css">
-        <!--<link rel="stylesheet" href="css/elements/a-global-element/my-element.css" />-->
+        <?php includeAsset('css','css/main.css');  ?>
+        <?php includeAsset('css','css/nav.css'); ?>
 
-		<link rel="stylesheet" href="css/print.css" media="print" />
+        <?php includeAsset('css','css/print.css','print'); ?>
     <!--END main CSS Includes-->
 
     <!--BEGIN conditional CSS Includes-->
@@ -52,7 +51,7 @@
         <?php } ?>
 
         <?php if($page_to_top_link) { ?>
-        	<link rel="stylesheet" href="css/elements/to-top-link/to-top.css" media="all" />
+            <?php includeAsset('css','css/elements/to-top-link/to-top.css','all'); ?>
         <?php } ?>
     <!--END conditional CSS Includes-->
 
@@ -81,6 +80,7 @@
     <!--END IE Specific CSS Includes and Polyfills-->
 
     <!--BEGIN Fonts.com Include-->
+        <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Satisfy|Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link href="fonts/font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet">
         <!--<link rel="stylesheet" href="fonts/icomoon/style.css">-->
         <!--[if lt IE 8]>

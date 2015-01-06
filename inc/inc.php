@@ -87,6 +87,6 @@
     /* Cache busting for newer asset files */
     $filename_based_cache_busting = true;
     
-    include $path . 'includes/filename_based_cache_busting.php';
+    include $path . '../includes/filename_based_cache_busting.php';
 
 ?>
