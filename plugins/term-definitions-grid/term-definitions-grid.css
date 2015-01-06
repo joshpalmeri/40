@@ -60,6 +60,7 @@ ul.term-definitions-grid {
             right: -85%;
             bottom: 0;
             left: 85%;
+            background: url("img/colors/000/transparent-black-35.png") 0 0 repeat;
             background: rgba(0,0,0,.35);
 
             -webkit-transition: all .2s ease-in-out;
@@ -69,10 +70,12 @@ ul.term-definitions-grid {
         }
 
         .term-definitions-grid li:hover .callout {
+            background: url("img/colors/000/transparent-black-45.png") 0 0 repeat;
             background: rgba(0,0,0,.45);
         }
 
         .term-definitions-grid li.active .callout {
+            background: url("img/colors/000/transparent-black-45.png") 0 0 repeat;
             background: rgba(0,0,0,.45);
             left: 0;
             right: 0;

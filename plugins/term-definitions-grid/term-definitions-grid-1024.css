@@ -26,6 +26,7 @@
         border-right: 1px solid #6c92be;
         border-left: 1px solid #6c92be;
         border-bottom: 2px solid #6c92be;
+        background: url("img/colors/000/transparent-black-10.png") 0 0 repeat;
         background: rgba(0,0,0,.075);
     }
     .term-definitions-grid li.top-left,
@@ -68,6 +69,7 @@
             right: 0;
             bottom: 0;
             left: 0;
+            background: url("img/colors/000/transparent-black-35.png") 0 0 repeat;
             background: rgba(0,0,0,.35);
             padding: 20px;
             opacity: 0;
@@ -108,7 +110,7 @@
         font-size: 6.2em;
         text-align: center;
         display: table-cell;
-        opacity: .2;
+        opacity: .4;
         color: #b6d2f2;
         cursor: default;
         text-shadow: 0 0 3px #000;
