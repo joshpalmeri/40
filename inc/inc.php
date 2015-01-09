@@ -61,7 +61,6 @@
     /* Page Include Controls */
     $page_header       = true;                  //Defines if $header is included on page        default true
     $page_footer       = true;                  //Defines if footer is included on page         default true
-    $page_loader       = false;                 //Defines if $page_loader is included on page   default false
 
     /* Javascript Libraries */
     $fastclick_js       = true;                 //Defines if fastclick.js is included to remove 300ms delay from mobile clicks
@@ -76,6 +75,8 @@
     $page_scroll_target = '".scroll"'; //Define options for scroll-to elements, to be used in conditional php
     $page_scroll_time   = 2000;                 //Time for scroll function in milliseconds
 
+    /* Page Fade */
+    $fade_in_page      = false;                 //Defines if the site will fade-in when a new page is loaded    default false
     
     /* Sticky Element Controls */
     $sticky_element          = true;            //Defines whether there is a sticky element

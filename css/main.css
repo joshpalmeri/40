@@ -234,6 +234,8 @@ textarea {
     *zoom: 1;
 }
 
+/* Widgets */
+
 #totop {
 	position: fixed;
 	bottom: 0;
@@ -247,6 +249,16 @@ textarea {
 	cursor: pointer;
 	text-shadow: 0 0 8px #333, 0 1px 1px #000;
 	opacity: .7;
+}
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:999999; /* makes sure it stays on top */
 }
 
 /* Containers */

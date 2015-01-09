@@ -56,6 +56,14 @@
         <?php } ?>
         <!-- END Page Specific Includes -->
 
+        <script type="text/javascript">
+	        <?php if($fade_in_page) { ?>
+	        	$('body').prepend('<div id="preloader"><div id="status"></div></div><style type="text/css"> body { overflow: hidden; } </style>');
+	            $('#status').fadeOut(); // will first fade out the loading animation
+	            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+	            $('body').delay(350).css({'overflow':'visible'});
+			<?php } ?>
+		</script>
         <!-- window.load() -->
         <script type="text/javascript">
 	        $(window).load(function() { // makes sure the whole site is loaded				
