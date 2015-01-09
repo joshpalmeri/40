@@ -17,7 +17,7 @@
         $working_path_relative_start_location = "localhost/";
     } else {
         $site          = ''; //site folder inside the root dir
-        $css_base_url  = 'http://www.dayspringdanceministries.org/';
+        $css_base_url  = '/';
         $path  = $root . '/' . $site . '/' . $inc_loc; //construct the path for php includes
 
         $is_production_environment = true;
