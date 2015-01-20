@@ -50,6 +50,14 @@
 		</script>
 		<?php } ?>
 
+		<?php if($validation) { ?>
+	        <script src="js/vendor/jquery-validation/jquery.validate.min.js"></script>
+	        <script src="js/vendor/jquery-validation/additional-methods.min.js"></script>
+	        <script type="text/javascript">
+	        	$('.validate').validate();
+	        </script>
+		<?php } ?>
+
 		<!-- BEGIN Page Specific Includes -->
 		<?php if($page_type=='') { ?>
 

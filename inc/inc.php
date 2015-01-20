@@ -82,6 +82,9 @@
     $sticky_element          = true;            //Defines whether there is a sticky element
     $sticky_element_selector = '".sticky"';     //Define selector for element(s) that should be sticky. Needs ".quotes"
 
+    /* Form Elements */
+    $validation = false;
+
     /* Display Configurations, Default Highlights */
     $main_nav_selected  = 0;                    //Index of selected nav item. Default is the first one.
 
