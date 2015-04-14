@@ -28,6 +28,19 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
+        <?php if($contact_form) { ?>
+        	<?php includeAsset('js','plugins/contact-form/contact-form.js'); ?>
+        <?php } ?>
+
+        <?php if($gallery) { ?>
+	        <script src="plugins/gallery/js/isotope.pkgd.min.js"></script>
+	        <script src="plugins/gallery/js/imagesloaded.pkgd.min.js"></script>
+			<?php includeAsset('js','plugins/gallery/js/isotope-custom.js'); ?>
+	        
+	        <script src="plugins/gallery/js/jquery.magnific-popup.min.js"></script>
+	        <?php includeAsset('js','plugins/gallery/js/magnific-popup-custom.js'); ?>
+		<?php } ?>
+
         <?php if($fastclick_js) { ?>
         <script src="js/vendor/fastclick.js"></script>
         <script type="text/javascript">
@@ -72,6 +85,7 @@
 	            $('body').delay(350).css({'overflow':'visible'});
 			<?php } ?>
 		</script>
+
         <!-- window.load() -->
         <script type="text/javascript">
 	        $(window).load(function() { // makes sure the whole site is loaded				

@@ -59,8 +59,8 @@
 
 
     /* Page Include Controls */
-    $page_header       = true;                  //Defines if $header is included on page        default true
-    $page_footer       = true;                  //Defines if footer is included on page         default true
+    $page_header       = true;                  //Defines if $header is included on page                default true
+    $page_footer       = true;                  //Defines if footer is included on page                 default true
 
     /* Javascript Libraries */
     $fastclick_js       = true;                 //Defines if fastclick.js is included to remove 300ms delay from mobile clicks
@@ -83,14 +83,21 @@
     $sticky_element_selector = '".sticky"';     //Define selector for element(s) that should be sticky. Needs ".quotes"
 
     /* Form Elements */
-    $validation = false;
+    $validation        = false;                 //Defines if form validation is included on the page    default false
+    $contact_form      = false;                 //Defines if contact form dependencies are included     default false
+
+    /* Gallery */
+    $gallery           = true;                  //Defines if a gallery is present on the page           default false
 
     /* Display Configurations, Default Highlights */
     $main_nav_selected  = 0;                    //Index of selected nav item. Default is the first one.
 
     /* Cache busting for newer asset files */
     $filename_based_cache_busting = true;
-    
     include $path . '../includes/filename_based_cache_busting.php';
+
+    //include Perch CMS
+    $perch_runtime = $root . '/' . $site . 'perch/runtime.php';
+    //include($perch_runtime);                  //Includes the Perch runtime library
 
 ?>

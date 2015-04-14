@@ -3,11 +3,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
         <title><?php echo $page_title_full; ?></title>
+        <!--<title><?php perch_pages_title(); ?></title>-->
 
         <meta name="author" content="<?php echo $author_name; ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <meta name="description" content="<?php echo $description; ?>">
         <meta name="keywords" content="<?php echo $page_keywords; ?>">
+        <!--perch cms alternative
+            <meta name="description" content="<?php perch_page_attribute('description'); ?>">
+            <meta name="keywords" content="<?php perch_page_attribute('keywords'); ?>">
+        -->
         <?php if(!$detect_phone_num) { ?>
             <meta name="format-detection" content="telephone=no">
         <?php } ?>
@@ -19,6 +24,13 @@
         <meta property="og:type" content="<?php echo $og_type; ?>" />
         <meta property="og:url" content="<?php echo $og_url; ?>" />
         <meta property="og:image" content="<?php echo $og_image; ?>" />
+        <!--perch cms alternative
+            <meta property="og:title" content="<?php perch_page_attribute('og_title'); ?>">
+            <meta property="og:description" content="<?php perch_page_attribute('og_description'); ?>">
+            <meta property="og:type"content="<?php perch_page_attribute('og_type'); ?>">
+            <meta property="og:url"content="<?php perch_page_attribute('og_url'); ?>">
+            <meta property="og:image"content="<?php perch_page_attribute('og_image'); ?>">
+        -->
     <!--END Open Graph Meta Tags-->
 
     	<base href="<?php echo $css_base_url; ?>">
@@ -48,6 +60,11 @@
 			<!--[if lt IE 9]>
 	            <link rel="stylesheet" href="css/default-ie8.css" media="all" />
 	        <![endif]-->
+        <?php } ?>
+
+        <?php if($gallery==true) { ?>
+            <?php includeAsset('css','plugins/gallery/css/magnific-popup.css'); ?>
+            <?php includeAsset('css','plugins/gallery/css/gallery.css'); ?>
         <?php } ?>
 
         <?php if($page_to_top_link) { ?>

@@ -5,7 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<!-- <inc> -->
 		<?php
-    		$inc = $_SERVER['DOCUMENT_ROOT'] . "/sbu-template-2014/inc/inc.php";
+    		if($_SERVER['SERVER_NAME'] == 'localhost') {
+    			$inc = $_SERVER['DOCUMENT_ROOT'] . "/awesome-php-template/inc/inc.php";
+    		} else {
+    			$inc = $_SERVER['DOCUMENT_ROOT'] . "/inc/inc.php";
+    		}
 			include($inc);
 		?>
 	<!-- </inc> -->
@@ -22,6 +26,9 @@
 		    $page_to_top_link = true;
 
 		    $page_footerbar   = true;
+
+		    $validation        = false;                 //Defines if form validation is included on the page    default false
+    		$contact_form      = false;                 //Defines if contact form dependencies are included     default false
 		?>
 
 	<!-- <head> -->
