@@ -413,6 +413,13 @@ AddDefaultCharset utf-8
 #     RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # </IfModule>
 
+# ----------------------------------------------------------------------
+# | Custom site rewrites                                               |
+# ----------------------------------------------------------------------
+# 
+# rewrite any of the sections on the home page
+# 
+
 
 # ######################################################################
 # # SECURITY                                                           #

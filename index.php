@@ -5,18 +5,20 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<!-- <inc> -->
 		<?php
-    		$inc = $_SERVER['DOCUMENT_ROOT'] . "/awesome-php-template/inc/inc.php";
+    		$inc = $_SERVER['DOCUMENT_ROOT'] . "/40/inc/inc.php";
 			include($inc);
 		?>
 	<!-- </inc> -->
 	<!--site variables-->
 		<?php
+			$page_type = 'home';
 		    $main_nav_selected = 0;
+		    $motio = true;
 		?>
 
 	<!-- <head> -->
 		<?php 
-			if($page_header) {
+			if($page_header) { 
 				include($path . $header);
 			}
 		?>
@@ -42,8 +44,8 @@
 
 		                <!-- <main-content> -->
 							<?php
-								$file = "content-test.php";
-								include($path . $content . $test . $file);
+								$file = "main-content.php";
+								include($path . $content . $file);
 							?>
 						<!-- </main-content> -->
 

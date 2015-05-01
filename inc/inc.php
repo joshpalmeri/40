@@ -4,11 +4,11 @@
     $inc_loc     = 'inc/';                          //location for php includes
     $dir         = dirname(__FILE__);
 
-    $site_domain = 'http://localhost/';    //change to URL when going live
+    $site_domain = 'http://localhost:8888/';    //change to URL when going live
 
     if($_SERVER['SERVER_NAME'] == 'localhost') {
-        $site          = 'awesome-php-template/'; //site folder inside the root dir
-        $css_base_url  = 'http://localhost/awesome-php-template/';
+        $site          = '40/'; //site folder inside the root dir
+        $css_base_url  = 'http://localhost:8888/40/';
         $path  = $root . '/' . $site . $inc_loc; //construct the path for php includes
 
         $is_local_environment = true;
@@ -41,17 +41,17 @@
     /* Meta Variables Defaults */
     $author_name       = 'Joshua Palmeri';      //your name
     $page_type         = 'default';             //custom page type
-    $page_title        = '';                    //meta title
-    $page_description  = '';                    //meta description
-    $page_keywords     = '';                    //meta keywords
-    $page_title_sub    = '';                    //meta sub title
+    $page_title        = '40 Under Forty 2015';                    //meta title
+    $page_description  = 'Stony Brook Alumni Association showcases forty individuals under 40 years of age who have made an impact since graduating from SUNY Stony Brook.';                    //meta description
+    $page_keywords     = '40 under forty, 40 under 40, entrepreneurs under 40, stony brook advancement, stony brook alumni';                    //meta keywords
+    $page_title_sub    = 'Stony Brook University';                    //meta sub title
     $page_title_full   = $page_title . ' | ' . 
                          $page_title_sub;       //full meta title, format 'Title | Subtitle'
 
     $detect_phone_num  = false;                 //format-detection for telephone number
                                                 //default is false, meaning device styles will not be applied
 
-    $og_title          = '';                    //OpenGraph title
+    $og_title          = 'Stony Brook 40 Under Forty 2015';                    //OpenGraph title
     $og_description    = $page_description;     //OpenGraph description
     $og_type           = 'website';             //OpenGraph type: for options see http://ogp.me/ 
     $og_url            = 'http://';             //site URL for OpenGraph
@@ -82,22 +82,25 @@
     $sticky_element          = true;            //Defines whether there is a sticky element
     $sticky_element_selector = '".sticky"';     //Define selector for element(s) that should be sticky. Needs ".quotes"
 
+    $social_feed = true;
+    $carousel = true;
+
     /* Form Elements */
     $validation        = false;                 //Defines if form validation is included on the page    default false
     $contact_form      = false;                 //Defines if contact form dependencies are included     default false
 
     /* Gallery */
-    $gallery           = true;                  //Defines if a gallery is present on the page           default false
+    $gallery           = false;                  //Defines if a gallery is present on the page           default false
 
     /* Display Configurations, Default Highlights */
     $main_nav_selected  = 0;                    //Index of selected nav item. Default is the first one.
 
     /* Cache busting for newer asset files */
-    $filename_based_cache_busting = true;
+    $filename_based_cache_busting = false;
     include $path . '../includes/filename_based_cache_busting.php';
 
     //include Perch CMS
-    $perch_runtime = $root . '/' . $site . 'perch/runtime.php';
+    //$perch_runtime = $root . '/' . $site . 'perch/runtime.php';
     //include($perch_runtime);                  //Includes the Perch runtime library
 
 ?>

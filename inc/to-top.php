@@ -1,4 +1,4 @@
 					<div id="totop" class="totop-fixed-container">
-						<i class="fa fa-chevron-up"></i>
-						<span class="to-top">to top</span>
+						<i class="sbuicon-arrow-circle-up"></i>
+						<span class="to-top">Going up?</span>
 					</div>

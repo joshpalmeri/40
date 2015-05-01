@@ -6,7 +6,7 @@
 	<!-- <inc> -->
 		<?php
     		if($_SERVER['SERVER_NAME'] == 'localhost') {
-    			$inc = $_SERVER['DOCUMENT_ROOT'] . "/awesome-php-template/inc/inc.php";
+    			$inc = $_SERVER['DOCUMENT_ROOT'] . "/40/inc/inc.php";
     		} else {
     			$inc = $_SERVER['DOCUMENT_ROOT'] . "/inc/inc.php";
     		}

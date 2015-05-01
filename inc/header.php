@@ -3,16 +3,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
         <title><?php echo $page_title_full; ?></title>
-        <!--<title><?php perch_pages_title(); ?></title>-->
 
         <meta name="author" content="<?php echo $author_name; ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <meta name="description" content="<?php echo $description; ?>">
         <meta name="keywords" content="<?php echo $page_keywords; ?>">
-        <!--perch cms alternative
-            <meta name="description" content="<?php perch_page_attribute('description'); ?>">
-            <meta name="keywords" content="<?php perch_page_attribute('keywords'); ?>">
-        -->
         <?php if(!$detect_phone_num) { ?>
             <meta name="format-detection" content="telephone=no">
         <?php } ?>
@@ -24,13 +19,6 @@
         <meta property="og:type" content="<?php echo $og_type; ?>" />
         <meta property="og:url" content="<?php echo $og_url; ?>" />
         <meta property="og:image" content="<?php echo $og_image; ?>" />
-        <!--perch cms alternative
-            <meta property="og:title" content="<?php perch_page_attribute('og_title'); ?>">
-            <meta property="og:description" content="<?php perch_page_attribute('og_description'); ?>">
-            <meta property="og:type"content="<?php perch_page_attribute('og_type'); ?>">
-            <meta property="og:url"content="<?php perch_page_attribute('og_url'); ?>">
-            <meta property="og:image"content="<?php perch_page_attribute('og_image'); ?>">
-        -->
     <!--END Open Graph Meta Tags-->
 
     	<base href="<?php echo $css_base_url; ?>">
@@ -48,8 +36,12 @@
 
     <!--BEGIN main CSS Includes-->
         <link rel="stylesheet" href="css/vendor/normalize.min.css">
+        <?php includeAsset('css','plugins/nivo-lightbox/nivo-lightbox.css','all'); ?>
+        <?php includeAsset('css','plugins/nivo-lightbox/themes/default/custom.css','all'); ?>
         <?php includeAsset('css','css/main.css');  ?>
         <?php includeAsset('css','css/nav.css'); ?>
+        <?php includeAsset('css','css/honorees.css');  ?>
+        <?php if($profile_page) { includeAsset('css','css/profile.css'); } ?>
 
         <?php includeAsset('css','css/print.css','print'); ?>
     <!--END main CSS Includes-->
@@ -97,11 +89,12 @@
     <!--END IE Specific CSS Includes and Polyfills-->
 
     <!--BEGIN Fonts.com Include-->
-        <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Satisfy|Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-		<link href="fonts/font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet">
-        <!--<link rel="stylesheet" href="fonts/icomoon/style.css">-->
+        <link href='http://fonts.googleapis.com/css?family=Great+Vibes|Cookie' rel='stylesheet' type='text/css'>
+        <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/8b09d344-baa0-42a8-bbac-175ff46c86d5.css"/>
+		<!--<link href="fonts/font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="fonts/icomoon/style.css">
         <!--[if lt IE 8]>
-            <link rel="stylesheet" href="/css/ie/icomoon-ie7.css">
+            <link rel="stylesheet" href="fonts/icomoon/ie7/ie7.css">
         <![endif]-->
     <!--END Fonts.com Include-->
 
