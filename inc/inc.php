@@ -1,29 +1,39 @@
 <?php 
     /* Include Variables */
     $root        = $_SERVER['DOCUMENT_ROOT'];       //server root
-    $inc_loc     = 'inc/';                          //location for php includes
+    $inc_loc     = 'inc';                          //location for php includes
     $dir         = dirname(__FILE__);
 
-    $site_domain = 'http://localhost:8888/';    //change to URL when going live
-
     if($_SERVER['SERVER_NAME'] == 'localhost') {
-        $site          = '40/'; //site folder inside the root dir
+        $site          = '40'; //site folder inside the root dir
         $css_base_url  = 'http://localhost:8888/40/';
-        $path  = $root . '/' . $site . $inc_loc; //construct the path for php includes
+        $path  = $root . '/' . $site . '/' . $inc_loc . '/';
 
         $is_local_environment = true;
+        $is_proofing_environment = false;
         $is_production_environment = false;
 
         $working_path_relative_start_location = "localhost/";
     } else {
-        $site          = ''; //site folder inside the root dir
-        $css_base_url  = '/';
-        $path  = $root . '/' . $site . '/' . $inc_loc; //construct the path for php includes
+        if($is_dev !== false) { //$is_dev determined in each index.php
+            $site          = 'development/40';
+            $css_base_url  = 'http://mobile.cc.stonybrook.edu/development/40/';
+            $path  = $root . '/' . $site . '/' . $inc_loc . '/';
+            $working_path_asset_dir = '';
+            $is_proofing_environment = true;
+            $is_production_environment = false;
+            $is_local_environment = false; 
+        } else {
+            $site          = '40';
+            $css_base_url  = 'http://mobile.cc.stonybrook.edu/40/';
+            $path  = $root . '/' . $site . '/' . $inc_loc . '/';
+            $working_path_asset_dir = '';
+            $is_production_environment = true;
+            $is_proofing_environment = false;
+            $is_local_environment = false;
+        }
 
-        $is_production_environment = true;
-        $is_local_environment = false;
-
-        $working_path_relative_start_location = "public_html/";
+        $working_path_relative_start_location = "web/";
     }
 
     $working_path_asset_dir = substr_replace($dir, $working_path_relative_start_location.$site, strpos($dir,$working_path_relative_start_location));
