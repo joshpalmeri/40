@@ -74,10 +74,6 @@
         <?php } ?>
         <!-- END Page Specific Includes -->
 
-        <?php if($contact_form) { ?>
-        	<?php includeAsset('js','plugins/contact-form/contact-form.js'); ?>
-        <?php } ?>
-
         <?php includeAsset('js','plugins/nivo-lightbox/nivo-lightbox.min.js'); ?>
 
         <?php if($gallery) { ?>
@@ -90,26 +86,17 @@
 		<?php } ?>
 
         <?php if($fastclick_js) { ?>
-        <script src="js/vendor/fastclick.js"></script>
-        <script type="text/javascript">
-		    //<![CDATA[
-		        $(function() {
-				    FastClick.attach(document.body);
-				});
-		    //]]>
-		</script>
+	        <script src="js/vendor/fastclick.js"></script>
+	        <script type="text/javascript">
+			    //<![CDATA[
+			        $(function() {
+					    FastClick.attach(document.body);
+					});
+			    //]]>
+			</script>
 		<?php } ?>
 
 		<script src="js/vendor/placeholders.jquery.min.js"></script>
-
-		<?php if($fittext_js) { ?>
-        <script src="js/vendor/jquery.fittext.js"></script>
-		<script type="text/javascript">
-		    //<![CDATA[
-				$("#fittextdemo").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
-		    //]]>
-		</script>
-		<?php } ?>
 
 		<?php if($tablesaw) { ?>
         	<?php includeAsset('js','plugins/tablesaw/tablesaw.js'); ?>
@@ -146,7 +133,6 @@
 		<?php } ?>
 
 		<?php if($social_feed) { ?>
-
 			<?php includeAsset('js','js/social/jquery.plugins.js'); ?>
 			<?php includeAsset('js','js/social/jquery.site.js'); ?>
 			<?php includeAsset('js','js/social/jquery.social.stream.1.5.4.js'); ?>
@@ -179,7 +165,6 @@
 								 
 				});
 			</script>
-
         <?php } ?>
 
         <?php if($carousel) { ?>
@@ -191,7 +176,6 @@
         <!-- window.load() -->
         <script type="text/javascript">
 	        $(window).load(function() { // makes sure the whole site is loaded				
-
 				<?php if($page_loader) { ?>
 		            $('#preloader-status').fadeOut(); // will first fade out the loading animation
 		            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
@@ -209,7 +193,6 @@
 		            if(scrollToTarget) {
 		           		$('body').scrollTo( scrollToTarget, <?php echo $page_scroll_time; ?> );
 		            }
-
 		        <?php } ?>
 	        })
 		</script>

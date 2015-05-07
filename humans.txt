@@ -1,45 +1,11 @@
-# TEAM
+# DEVELOPER
 
-    Web designer, developer, photographer, freelancer,
-    singer, songwriter, musician, leader,
-    Jesus-follower, husband.
-    -> Josh Palmeri
-
+    Josh Palmeri
     Twitter: @JoshPalmeri
-    Email: palmerijosh(_at_)gmail(_dot_)com
-    Blog: joshpalmeri.postach.io
-
-# THANKS
-
-    To my Lord and Savior, Jesus Christ, for loving me unconditionally, in every situation, and despite it all;
-    and for loving us all and giving us Your great grace. Thank You, Father.
-
-    To my wife and best friend, my companion and "study/work buddy". 
-    My support, encourager and uplifter. You enable me to be great.
-    Amanda, I love you.
-
-    To my family, for helping me to become who I am today. 
-    Thanks, Mom and Dad, Matt, Aunt Di, Nana, Papa, and Buddy.
-
-    To my church family and friends. Your encouragement has meant the world to my life and lifted me when I needed it most.
-    May God richly bless you.
-
-# TECHNOLOGY COLOPHON
-
-    HTML5 Boilerplate
-    HTML5, CSS3
-    javascript, jQuery, Modernizr
-    Lots of nifty plugins and libraries for which I am extremely grateful to my developer colleagues. THANK YOU.
+    Email: joshua.palmeri@stonybrook.edu
 
 # SITE
 
-    Last update: 2015/01/08
-    Language: English
-    Doctype: HTML5
-    IDE: Sublime Text 3, Git, Photoshop
-    Unless otherwise noted via open-source licenses, Custom Template and Code by Josh Palmeri
-
-# EXTRA STUFF
-
-    If you're looking for a website, or know someone who is, email me.
-    palmerijosh(_at_)gmail(_dot_)com
+    Stony Brook University
+    Alumni Relations
+    40 Under Forty Alumni Recognition Program
