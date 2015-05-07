@@ -16,6 +16,7 @@
 		    $archive_year = '2014';
 		    $profile_grid = true;
 		    $motio = false;
+		    $page_footer = false;
 		?>
 
 	<!-- <head> -->
@@ -32,14 +33,6 @@
 
         <div class="main-container">
             <div class="main clearfix">
-
-		        <!-- <header> -->
-		        <?php 
-					if($page_footer) {
-						include($path . $footer);
-					}
-				?>
-				<!-- </header> -->
 				        
 		        <div class="content-container">
 		            <div class="content clearfix">

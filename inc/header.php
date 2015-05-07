@@ -38,10 +38,16 @@
         <link rel="stylesheet" href="css/vendor/normalize.min.css">
         <?php includeAsset('css','plugins/nivo-lightbox/nivo-lightbox.css','all'); ?>
         <?php includeAsset('css','plugins/nivo-lightbox/themes/default/custom.css','all'); ?>
+
+        <?php if($tablesaw==true) { ?>
+            <?php includeAsset('css','plugins/tablesaw/tablesaw.bare.css','screen'); ?>
+        <?php } ?>
+
         <?php includeAsset('css','css/main.css');  ?>
         <?php includeAsset('css','css/nav.css'); ?>
         <?php includeAsset('css','css/honorees.css');  ?>
         <?php if($profile_page) { includeAsset('css','css/profile.css'); } ?>
+        <?php if($page_type=='nominees') { includeAsset('css','css/nominees.css'); } ?>
 
         <?php includeAsset('css','css/print.css','print'); ?>
     <!--END main CSS Includes-->
@@ -102,4 +108,3 @@
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <!--END Modernizr Include-->
     </head>
-

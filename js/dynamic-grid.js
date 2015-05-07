@@ -11,7 +11,7 @@ function getBioData(item) {
 	var year = item.attr('data-year');
 	var linkHref = item.attr('href');
 
-	var theURL = year + '/people/' + filename + '.' + fileExt;
+	var theURL = year + '/profile.php/?name=' + filename;
 
 	var theItemToLoad = theURL + ' .bio-overlay > *';
 	var overlayContainer = $('.bio-overlay');
@@ -25,62 +25,48 @@ function getBioData(item) {
 			setUpListeners();
 			setUpWaypoints();
 			appendNextAndPrevNavigation(item);
-			history.pushState(null, null, linkHref);
+			if(Modernizr.history) {
+				history.pushState(null, null, linkHref);
+			}
 		}
 		closeItem($('.loader'));
 	});
 }
 
-function appendNextAndPrevNavigation(item) {
-	var thisIndex = Number(item.attr('data-index'));
-	var totalItems = 0;
-	$('a.honoree-box').each(function() {
-		totalItems = totalItems + 1;
+function popstateBioDataByName(name) {
+	var honoreeBox = $('a.honoree-box[data-filename="'+name+'"]');
+	var year = honoreeBox.attr('data-year');
+	var linkHref = honoreeBox.attr('href');
+	var theURL = year + '/profile.php/?name=' + name;
+
+	var theItemToLoad = theURL + ' .bio-overlay > *';
+	var overlayContainer = $('.bio-overlay');
+	var result = overlayContainer.load(theItemToLoad, function(response, status, xhr) {
+		if ( status == "error" ) {
+			console.log('Error: ' + xhr.status + " " + xhr.statusText );
+		} else {
+			showItem(overlayContainer);
+			setBioContainerHeight();
+			$('body').scrollTo( '0%', 50 );
+			setUpListeners();
+			setUpWaypoints();
+			appendNextAndPrevNavigation(honoreeBox);
+		}
+		closeItem($('.loader'));
 	});
-	console.log(thisIndex);
-	var prevIndex = thisIndex - 1;
-	if(prevIndex>0) {
-		var prevItem = $('a.honoree-box[data-index="'+prevIndex+'"]');
-		var prevItemDetails = [];
-		prevItemDetails.firstName = prevItem.attr('data-first-name');
-		prevItemDetails.lastName = prevItem.attr('data-last-name');
-		console.log(prevItemDetails);
-
-		var prevLinkHTML = '<a href="." class="prev pagination-trigger" data-role="button" aria-label="View previous biography" tabindex="0">';
-		prevLinkHTML += '<span class="label icon-before">Previous</span>';
-		prevLinkHTML += '<span class="name">'+prevItemDetails.firstName+' <br>'+prevItemDetails.lastName+'</span>';
-		prevLinkHTML += '</a>';
-
-		$('.pagination-wrapper').append(prevLinkHTML);
-	}
-
-	var nextIndex = thisIndex + 1;
-	if(nextIndex<=totalItems) {
-		var nextItem = $('a.honoree-box[data-index="'+nextIndex+'"]');
-		var nextItemDetails = [];
-		nextItemDetails.firstName = nextItem.attr('data-first-name');
-		nextItemDetails.lastName = nextItem.attr('data-last-name');
-		console.log(nextItemDetails);
-
-		var nextLinkHTML = '<a href="." class="next pagination-trigger" data-role="button" aria-label="View previous biography" tabindex="0">';
-		nextLinkHTML += '<span class="label icon-before">Next</span>';
-		nextLinkHTML += '<span class="name">'+nextItemDetails.firstName+' <br>'+nextItemDetails.lastName+'</span>';
-		nextLinkHTML += '</a>';
-
-		$('.pagination-wrapper').append(nextLinkHTML);
-	}
-
-	//$('.pagination-wrapper').append();
-
-	//now append to .pagination-wrapper
-	
 }
 
 function setUpListeners() {
 	//back button to close overlay
 	$('.overlay-control.back').on('click',function(e) {
 		e.preventDefault();
-		history.back();
+		closeItem($('.bio-overlay'));
+		var category = ($('.overlay-controls h3').attr('data-category'));
+		var year = $('.category-nav .close').attr('href');
+	    var theURL = year;
+	    if(Modernizr.history) {
+	    	history.pushState(null, null, theURL);
+	    }
 	});
 
 	$('.overlay-control.category').on('click',function(e) {
@@ -118,6 +104,13 @@ function setUpListeners() {
 		closeItem($('.category-nav .close'));
 	});
 
+	$('.back-button-trigger').on('click',function(e) {
+		if(Modernizr.history) {
+			e.preventDefault();
+			history.back();
+		}
+	});
+
 	$('.nivo-lightbox').nivoLightbox();
 }
 
@@ -131,20 +124,20 @@ function setBioContainerHeight() {
 	bioOverlay.css('min-height',totalHeight+'px');
 }
 
-window.addEventListener("popstate", function(e) {
-	overlayContainer = $('.bio-overlay');
-	var isOverlayShowing = overlayContainer.hasClass('show');
-    if(isOverlayShowing) {
-    	closeItem(overlayContainer);
-    } else {
-    	var theURL = window.location.href;
-    	//if URL contains people/ show the overlay with the last loaded information
-    	if(theURL.indexOf('people/') > -1) {
-    		showItem(overlayContainer);
-    		setBioContainerHeight();
-    	} else if(theURL.indexOf('?category=') > -1) { //else if 
-    		var filterValue = decodeURIComponent($.urlParam('category'));
-    		var $container = $('.isotope');
+if(Modernizr.history) {
+	window.addEventListener("popstate", function(e) {
+		var $container = $('.isotope');
+		overlayContainer = $('.bio-overlay');
+		var isOverlayShowing = overlayContainer.hasClass('show');
+		var theURL = window.location.href;
+		//if URL contains people/ show the overlay with the last loaded information
+		if(theURL.indexOf('/profile') > -1) {
+			var thisName = decodeURIComponent($.urlParam('name'));
+			popstateBioDataByName(thisName);
+			showItem(overlayContainer);
+			setBioContainerHeight();
+		} else if(theURL.indexOf('?category=') > -1) {
+			var filterValue = decodeURIComponent($.urlParam('category'));
 			if(filterValue=='*') {
 				$container.isotope({ filter: ':not(.show-all-trigger)' });
 			} else {
@@ -161,9 +154,16 @@ window.addEventListener("popstate", function(e) {
 			}
 			$('body').scrollTo( '0%', 400 );
 			setCategoryLabels(filterValue);
-    	}
-    }
-});
+			if(isOverlayShowing) {
+		    	closeItem(overlayContainer);
+		    }
+		} else {
+			$container.isotope({ filter: ':not(.show-all-trigger)' });
+			closeItem(overlayContainer);
+		}
+
+	});
+}
 
 function setUpWaypoints() {
 	var $overlayControls = $('.overlay-controls');
@@ -224,7 +224,7 @@ $(document).ready(function() {
 
 // Custom js for isotope gallery
 
-$( function() {
+$(window).load(function(){
 
 	var defaultFilter;
 
@@ -264,68 +264,78 @@ $( function() {
 
 	}
 
-  	// init Isotope
-  	var $container = $('.isotope');
-    $container.isotope({
-      itemSelector: '.honoree-box',
-      getSortData: {
-        name: '.name',
-        category: '[data-category]'
-      },
-      filter: defaultFilter
-    });
-
-    $('.show-all-trigger').on( 'click', function() {
-    	$('.filters .show-all').trigger('click');
-    });
-
-	// bind filter button click
-	$('.filters').on( 'click', 'button', function() { 
-		//Mod showing class
-		$('.filters button').each(function() {
-			$(this).removeClass('selected');
-		});
-		$(this).addClass('selected');
-		
-		//Update the current category text
-		var filterText = $( this ).text();
-		$('.show-all-trigger .category').text(filterText);
-
-		//Do the filter
-		var filterValue = $( this ).attr('data-filter');
-		if(filterValue=='*') {
-			$container.isotope({ filter: ':not(.show-all-trigger)' });
-		} else {
-			$container.isotope({ filter: function() {
-				var category = $(this).attr('data-category');
-				// return true to show, false to hide
-				if(filterValue==category || category=="Show All") {
-					return true;
-				} else {
-					return false;
-				}
-			}
+	if(!ie || ie > 8) {
+	  	// init Isotope
+		var $container = $('.isotope').imagesLoaded( function() {
+		    $container.isotope({
+		    	layoutMode: 'fitRows',
+				itemSelector: '.honoree-box',
+				transformsEnabled: false,
+				getSortData: {
+					name: '.name',
+					category: '[data-category]'
+				},
+				filter: defaultFilter
 			});
-		}
-		$('body').scrollTo( '0%', 400 );
-		setCategoryLabels(filterValue);
+	    });
+
+	    $('.show-all-trigger').on( 'click', function() {
+	    	$('.filters .show-all').trigger('click');
+	    });
+
+		// bind filter button click
+		$('.filters').on( 'click', 'button', function() { 
+			//Mod showing class
+			$('.filters button').each(function() {
+				$(this).removeClass('selected');
+			});
+			$(this).addClass('selected');
+			
+			//Update the current category text
+			var filterText = $( this ).text();
+			$('.show-all-trigger .category').text(filterText);
+
+			//Do the filter
+			var filterValue = $( this ).attr('data-filter');
+			console.log(filterValue);
+			if(filterValue=='*') {
+				$container.isotope({ filter: ':not(.show-all-trigger)' });
+			} else {
+				$container.isotope({ filter: function() {
+					var category = $(this).attr('data-category');
+					// return true to show, false to hide
+					if(filterValue==category || category=="Show All") {
+						return true;
+					} else {
+						return false;
+					}
+				}
+				});
+			}
+			$('body').scrollTo( '0%', 400 );
+			setCategoryLabels(filterValue);
 
 
-		//if mobile, hide the category menu
-		if($(window).width()<960) {
-			closeItem($('.category-nav'));
-			closeItem($('.category-nav .close'));
-		}
+			//if mobile, hide the category menu
+			if($(window).width()<960) {
+				closeItem($('.category-nav'));
+				closeItem($('.category-nav .close'));
+			}
 
-		//if overlay showing, trigger the overlay close
-		overlayContainer = $('.bio-overlay');
-		var isOverlayShowing = overlayContainer.hasClass('show');
-	    if(isOverlayShowing) {
-	    	closeItem(overlayContainer);
-	    }
-	    var year = $('.category-nav .close').attr('href');
-	    var theURL = year + '?category=' + encodeURIComponent(filterValue);
-	    history.pushState(null, null, theURL);
-	});
+			//if overlay showing, trigger the overlay close
+			overlayContainer = $('.bio-overlay');
+			var isOverlayShowing = overlayContainer.hasClass('show');
+		    if(isOverlayShowing) {
+		    	closeItem(overlayContainer);
+		    }
+		    var year = $('.category-nav .close').attr('href');
+		    var theURL = year + '?category=' + encodeURIComponent(filterValue);
+		    if(Modernizr.history) {
+		    	history.pushState(null, null, theURL);
+		    }
+		});
+	} else {
+		$('.category-nav').css('display','none');
+	}
 
 });

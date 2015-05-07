@@ -19,39 +19,42 @@ function doSmoothScroll(location,speed,urlPath) {
 	$('body').scrollTo( location, speed, {
 		axis:'y',
 		easing: 'easeOutQuart',
-		offset: -useOffset + 2
+		offset: -useOffset
 	});
-	history.pushState(null, null, urlPath);
+	if(Modernizr.history) {
+		history.pushState(null, null, urlPath);
+	}
 }
 
-window.addEventListener("popstate", function(e) {
-	console.log('popstate');
-	var theURL = window.location.href;
-	//if URL contains people/ show the overlay with the last loaded information
-	if(theURL.indexOf('people/') > -1) {
-		showItem(overlayContainer);
-	} else if(theURL.indexOf('?category=') > -1) { //else if 
-		var filterValue = decodeURIComponent($.urlParam('category'));
-		console.log(filterValue);
-		var $container = $('.isotope');
-		if(filterValue=='*') {
-			$container.isotope({ filter: ':not(.show-all-trigger)' });
-		} else {
-			$container.isotope({ filter: function() {
-				var category = $(this).attr('data-category');
-				console.log(category);
-				// return true to show, false to hide
-				if(filterValue==category || category=="Show All") {
-					return true;
-				} else {
-					return false;
+if(Modernizr.history) {
+	window.addEventListener("popstate", function(e) {
+		var theURL = window.location.href;
+		//if URL contains people/ show the overlay with the last loaded information
+		if(theURL.indexOf('people/') > -1) {
+			showItem(overlayContainer);
+		} else if(theURL.indexOf('?category=') > -1) { //else if 
+			var filterValue = decodeURIComponent($.urlParam('category'));
+			console.log(filterValue);
+			var $container = $('.isotope');
+			if(filterValue=='*') {
+				$container.isotope({ filter: ':not(.show-all-trigger)' });
+			} else {
+				$container.isotope({ filter: function() {
+					var category = $(this).attr('data-category');
+					console.log(category);
+					// return true to show, false to hide
+					if(filterValue==category || category=="Show All") {
+						return true;
+					} else {
+						return false;
+					}
 				}
+				});
 			}
-			});
+			$('body').scrollTo( '0%', 400 );
 		}
-		$('body').scrollTo( '0%', 400 );
-	}
-});
+	});
+}
 
 var backgroundVideo = $('.background-video');
 var fortyLogo = $('.marquee-logo-desktop');
@@ -73,7 +76,7 @@ function playTheVideo() {
 			donePlaying = true;
 			fortyLogo.removeClass('rotate-this');
 			clearInterval(checkPlayPosition);
-			showQuote = setInterval(showTheQuote,6000);
+			showQuote = setInterval(showTheQuote,4000);
 		} else if(videoShowing && currentPlayTime > 10) {
 			fortyLogo.addClass('rotate-this');
 		} 
@@ -93,16 +96,16 @@ function showTheQuote() {
 
 $(document).ready(function() {
 
-	/* navigation waypoints */
+	// Set up event gallery
+	getImgs("72157649295457517");
 
+	/* navigation waypoints */
 	var $archiveNav = $('.archive-nav');
 	var $header = $('header');
-
 	var headerOffset = $header.outerHeight();
 	var navOffset = headerOffset + $archiveNav.outerHeight();
 
 	//if the page is loaded with a hash in URL
-	
 	var hash = window.location.hash;
 	if(hash!=='' && hash!='null' && hash!==null && hash!=='0' && hash!=='*') {
 		var urlPath = hash.substring(1,hash.length);
@@ -110,36 +113,35 @@ $(document).ready(function() {
 	}
 
 	// scrollto hashtags
-
 	$('[data-scroll-to="true"]').on('click',function(event) {
 		event.preventDefault();
 		var dataTarget = $(this).attr('href');
 		var urlPath = dataTarget.substring(1,dataTarget.length);
 		var dataSpeed = 800;
 		doSmoothScroll(dataTarget,dataSpeed,urlPath);
+		$(this).blur();
 	});
 
 	/* background video */
-
-	if($(window).width()>=960) {
+	if($(window).width()>=960 && Modernizr.history) {
 		checkPlayPosition = setInterval(playTheVideo,100);
 	}
 
 	$('.stop-video-trigger').on('click',function() {
-		if($(window).width()>=960 && backgroundVideo.is(':visible')) {
+		if($(window).width()>=960 && backgroundVideo.is(':visible') && Modernizr.history) {
 			fortyLogo.removeClass('rotate-this');
 			clearInterval(checkPlayPosition);
 			backgroundVideo.remove();
 		}
 	});
 
+	/* quote */
 	$('.close-quote').on('click',function(e) {
 		e.preventDefault();
 		$('.quote').fadeOut(1000);
 	});
 
 	/* waypoints */
-
 	var theVideo = $('#forty-video');
 
 	var waypoints = $('.honorees-grid-promo').waypoint({
@@ -149,7 +151,7 @@ $(document).ready(function() {
 				if(!($archiveNav.hasClass('hover'))) {
 					toggleElementDesktop($archiveNav);
 				}
-				if($(window).width()>=960 && theVideo.length) {
+				if($(window).width()>=960 && theVideo.length && Modernizr.history) {
 					theVideo.get(0).pause();
 				}
 			}
@@ -164,7 +166,7 @@ $(document).ready(function() {
 				if(!($archiveNav.hasClass('hover'))) {
 					toggleElementDesktop($archiveNav);
 				}
-				if($(window).width()>=960 && theVideo.length) {
+				if($(window).width()>=960 && theVideo.length && Modernizr.history) {
 					theVideo.get(0).play();
 				}
 			}
@@ -192,7 +194,6 @@ $(document).ready(function() {
 	});
 
 	/* overlay waypoints */
-
 	var $elementToStickOver = $('.honorees-grid-promo');
 	var $elementTopToRemoveSticky = $('.marquee');
 	var $elementBottomToRemoveSticky = $('.attend-the-event');

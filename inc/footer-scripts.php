@@ -1,12 +1,31 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
+		<script type="text/javascript">
+			// Detect IE, from http://james.padolsey.com/javascript/detect-ie-in-js-using-conditional-comments/
+			var ie = (function(){
+
+			    var undef,
+			        v = 3,
+			        div = document.createElement('div'),
+			        all = div.getElementsByTagName('i');
+
+			    while (
+			        div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+			        all[0]
+			    );
+
+			    return v > 4 ? v : undef;
+
+			}());
+		</script>
+
         <script type="text/javascript" src="js/vendor/jquery.sticky.js"></script>
 		<script>
 			var theVideo = $('#forty-video');
 			$(window).load(function(){
 				if($(window).width()>=960) {
-					if(theVideo.length) {
+					if(theVideo.length && (!ie || ie > 9)) {
 						theVideo.get(0).play();
 					}
 					$(<?php echo $sticky_element_selector; ?>).sticky({ topSpacing: 0 });
@@ -28,6 +47,7 @@
 		<script src="plugins/waypoints/jquery.waypoints.js"></script>
 		<script src="plugins/waypoints/inview.js"></script>
 		<script src="js/vendor/jquery.motio.js"></script>
+		<script src="js/vendor/jquery.history.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
@@ -40,10 +60,17 @@
 
         <?php if($profile_grid) { ?>
         	<script src="js/vendor/isotope.pkgd.min.js"></script>
+	        <script src="plugins/gallery/js/imagesloaded.pkgd.min.js"></script>
+	        <script src="plugins/gallery/js/fit-columns.js"></script>
+	        <!--[if lt IE 9]>
+	            <link rel="stylesheet" href="css/ie/lte-ie8.css">
+	        <![endif]-->
         	<script src="js/dynamic-grid.js"></script>
         <?php } ?>
         <?php if($profile_page || $page_type=='home') { ?>
 			<script src="js/profile-page.js"></script>
+        <?php } else if($page_type=='nominees') { ?>
+			<script src="js/nominees.js"></script>
         <?php } ?>
         <!-- END Page Specific Includes -->
 
@@ -83,6 +110,10 @@
 		    //]]>
 		</script>
 		<?php } ?>
+
+		<?php if($tablesaw) { ?>
+        	<?php includeAsset('js','plugins/tablesaw/tablesaw.js'); ?>
+        <? } ?>
 
 		<?php if($validation) { ?>
 	        <script src="js/vendor/jquery-validation/jquery.validate.min.js"></script>
@@ -155,59 +186,7 @@
 	    	<?php includeAsset('js','js/elements/owl-carousel/owl.carousel.js'); ?>
 	    <?php } ?>
 
-		<script>
-			//adapted from http://www.lovelldsouza.com/webdev/flickr-to-website/
-			function getImgs(setId) {
-			  var URL = "https://api.flickr.com/services/rest/" + // Call API
-			    "?method=flickr.photosets.getPhotos" +  // Get photo from a photoset. http://www.flickr.com/services/api/flickr.photosets.getPhotos.htm
-			    "&api_key=0e78a7e20cc2ea3a5456c04ce7deb2b1" +  // API key. Get one here: http://www.flickr.com/services/apps/create/apply/
-			    "&photoset_id=" + setId +  // The set ID.
-			    "&privacy_filter=1" +  // 1 signifies all public photos.
-			    "&per_page=40" + // For the sake of this example I am limiting it to 20 photos.
-			    "&format=json&nojsoncallback=1";  // Er, nothing much to explain here.
-
-			  // See the API in action here: http://www.flickr.com/services/api/explore/flickr.photosets.getPhotos
-				$.getJSON(URL, function(data){
-					$.each(data.photoset.photo, function(i, item){
-						// Creating the image URL. Info: http://www.flickr.com/services/api/misc.urls.html
-						var src_start = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret;
-						var img_thumb_src = src_start + "_q.jpg";
-						var img_large_src = src_start + "_b.jpg";
-
-						var img_html = '<a class="item nivo-lightbox" href="'+ img_large_src +'" data-lightbox-gallery="event-gallery">';
-						img_html += '<img src="' + img_thumb_src + '" />';
-						img_html += '</a>';
-
-						$(img_html).appendTo("#the-carousel");
-					});
-				}).done(function() {
-					// Create the Carousel
-				    var owl = $("#the-carousel");
-	                owl.owlCarousel({
-	                	itemsCustom: [[0,2],[480,2],[600,3],[840,4],[960,5],[1140,6],[1440,7],[1700,8]],
-	                    autoPlay: false,
-	                    navigation : true, // Show next and prev buttons
-	                    slideSpeed : 800,
-	                    paginationSpeed : 400
-	                });
-	                $('.owl-prev-3').on('click', function() {
-	                    owl.trigger('owl.prev');
-	                });
-	                $('.owl-next-3').on('click', function() {
-	                    owl.trigger('owl.next');
-	                });
-
-	                // Initiate the Lightbox
-	                $('.nivo-lightbox').nivoLightbox();
-				});
-			}
-
-			$(document).ready(function() {
-				getImgs("72157649295457517"); // Set up event gallery
-			});
-		</script>
-
-        
+	    <?php includeAsset('js','js/custom-feeds.js'); ?>        
 
         <!-- window.load() -->
         <script type="text/javascript">

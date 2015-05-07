@@ -54,8 +54,8 @@
     $og_title          = 'Stony Brook 40 Under Forty 2015';                    //OpenGraph title
     $og_description    = $page_description;     //OpenGraph description
     $og_type           = 'website';             //OpenGraph type: for options see http://ogp.me/ 
-    $og_url            = 'http://';             //site URL for OpenGraph
-    $og_image          = 'http://';             //image for OpenGraph
+    $og_url            = 'http://stonybrook.edu/40under40';             //site URL for OpenGraph
+    $og_image          = 'http://mobile.cc.stonybrook.edu/sb/img/logo/40-under-red-banner-logo-small.png';             //image for OpenGraph
 
 
     /* Page Include Controls */

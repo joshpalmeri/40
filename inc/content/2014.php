@@ -6,206 +6,85 @@
 <!-- </nav> -->
 
 <section class="honorees-grid first-section clearfix">
-    <h2><span class="text">The <span class="year">2014</span> Finalists</span></h2>
+    <h2 class="section-header"><span class="text">The <span class="year">2014</span> Finalists</span></h2>
     <div class="clearfix isotope">
-        <a href="2014/profile.php?name=errol-cockfield" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Cockfield" data-index="1" data-filename="errol-cockfield" data-year="2014" data-first-name="Errol" data-last-name="Cockfield" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/errol-cockfield.jpg" alt="Portrait of Errol Cockfield">
-            <div class="preview-details">
-                <span class="name">Errol<br /> Cockfield</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Jo" data-index="2" data-filename="suzan-jo" data-year="2014" data-first-name="Suzan" data-last-name="Jo" data-email="test@email.com" data-category="Education">
-            <img src="img/people/grid/suzan-jo.jpg" alt="Portrait of Suzan Jo">
-            <div class="preview-details">
-                <span class="name">Suzan<br /> Jo</span>
-                <span class="category">Education</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Tristan Walker" data-index="3" data-filename="tristan-walker" data-year="2014" data-first-name="Tristan" data-last-name="Walker" data-email="test@email.com" data-category="Sports">
-            <img src="img/people/grid/tristan-walker.jpg" alt="Portrait of Tristan Walker">
-            <div class="preview-details">
-                <span class="name">Tristan<br /> Walker</span>
-                <span class="category">Sports</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Cockfield" data-index="1" data-filename="errol-cockfield" data-year="2014" data-first-name="Errol" data-last-name="Cockfield" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/errol-cockfield.jpg" alt="Portrait of Errol Cockfield">
-            <div class="preview-details">
-                <span class="name">Errol<br /> Cockfield</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Jo" data-index="2" data-filename="suzan-jo" data-year="2014" data-first-name="Suzan" data-last-name="Jo" data-email="test@email.com" data-category="Education">
-            <img src="img/people/grid/suzan-jo.jpg" alt="Portrait of Suzan Jo">
-            <div class="preview-details">
-                <span class="name">Suzan<br /> Jo</span>
-                <span class="category">Education</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Tristan Walker" data-index="3" data-filename="tristan-walker" data-year="2014" data-first-name="Tristan" data-last-name="Walker" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/tristan-walker.jpg" alt="Portrait of Tristan Walker">
-            <div class="preview-details">
-                <span class="name">Tristan<br /> Walker</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Cockfield" data-index="1" data-filename="errol-cockfield" data-year="2014" data-first-name="Errol" data-last-name="Cockfield" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/errol-cockfield.jpg" alt="Portrait of Errol Cockfield">
-            <div class="preview-details">
-                <span class="name">Errol<br /> Cockfield</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Jo" data-index="2" data-filename="suzan-jo" data-year="2014" data-first-name="Suzan" data-last-name="Jo" data-email="test@email.com" data-category="Education">
-            <img src="img/people/grid/suzan-jo.jpg" alt="Portrait of Suzan Jo">
-            <div class="preview-details">
-                <span class="name">Suzan<br /> Jo</span>
-                <span class="category">Education</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Tristan Walker" data-index="3" data-filename="tristan-walker" data-year="2014" data-first-name="Tristan" data-last-name="Walker" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/tristan-walker.jpg" alt="Portrait of Tristan Walker">
-            <div class="preview-details">
-                <span class="name">Tristan<br /> Walker</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Cockfield" data-index="1" data-filename="errol-cockfield" data-year="2014" data-first-name="Errol" data-last-name="Cockfield" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/errol-cockfield.jpg" alt="Portrait of Errol Cockfield">
-            <div class="preview-details">
-                <span class="name">Errol<br /> Cockfield</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Jo" data-index="2" data-filename="suzan-jo" data-year="2014" data-first-name="Suzan" data-last-name="Jo" data-email="test@email.com" data-category="Education">
-            <img src="img/people/grid/suzan-jo.jpg" alt="Portrait of Suzan Jo">
-            <div class="preview-details">
-                <span class="name">Suzan<br /> Jo</span>
-                <span class="category">Education</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Tristan Walker" data-index="3" data-filename="tristan-walker" data-year="2014" data-first-name="Tristan" data-last-name="Walker" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/tristan-walker.jpg" alt="Portrait of Tristan Walker">
-            <div class="preview-details">
-                <span class="name">Tristan<br /> Walker</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Cockfield" data-index="1" data-filename="errol-cockfield" data-year="2014" data-first-name="Errol" data-last-name="Cockfield" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/errol-cockfield.jpg" alt="Portrait of Errol Cockfield">
-            <div class="preview-details">
-                <span class="name">Errol<br /> Cockfield</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Jo" data-index="2" data-filename="suzan-jo" data-year="2014" data-first-name="Suzan" data-last-name="Jo" data-email="test@email.com" data-category="Education">
-            <img src="img/people/grid/suzan-jo.jpg" alt="Portrait of Suzan Jo">
-            <div class="preview-details">
-                <span class="name">Suzan<br /> Jo</span>
-                <span class="category">Education</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Tristan Walker" data-index="3" data-filename="tristan-walker" data-year="2014" data-first-name="Tristan" data-last-name="Walker" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/tristan-walker.jpg" alt="Portrait of Tristan Walker">
-            <div class="preview-details">
-                <span class="name">Tristan<br /> Walker</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Cockfield" data-index="1" data-filename="errol-cockfield" data-year="2014" data-first-name="Errol" data-last-name="Cockfield" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/errol-cockfield.jpg" alt="Portrait of Errol Cockfield">
-            <div class="preview-details">
-                <span class="name">Errol<br /> Cockfield</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Jo" data-index="2" data-filename="suzan-jo" data-year="2014" data-first-name="Suzan" data-last-name="Jo" data-email="test@email.com" data-category="Education">
-            <img src="img/people/grid/suzan-jo.jpg" alt="Portrait of Suzan Jo">
-            <div class="preview-details">
-                <span class="name">Suzan<br /> Jo</span>
-                <span class="category">Education</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
-        <a href="2014/people/errol-cockfield.php" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Tristan Walker" data-index="3" data-filename="tristan-walker" data-year="2014" data-first-name="Tristan" data-last-name="Walker" data-email="test@email.com" data-category="Arts & Entertainment">
-            <img src="img/people/grid/tristan-walker.jpg" alt="Portrait of Tristan Walker">
-            <div class="preview-details">
-                <span class="name">Tristan<br /> Walker</span>
-                <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">View Bio</span>
-            </div>
-        </a>
+
         <div class="honoree-box show-all-trigger" role="button" tabindex="0" aria-label="View All Honorees" data-category="Show All">
             <div class="preview-details">
-                <span class="name">Current<br /> Category</span>
+                <span class="name">Currently<br /> Showing</span>
                 <span class="category">Arts &amp; Entertainment</span>
-                <span class="view-label arrow-after">Show All</span>
+                <span class="view-label arrow-after">View All</span>
             </div>
         </div>
+
+        <!-- BEGIN Output of People Data -->
+        <a href="2014/profile.php?name=errol-cockfield" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Errol Cockfield" data-index="1" data-filename="errol-cockfield" data-year="2014" data-first-name="Errol" data-last-name="Cockfield" data-email="test@email.com" data-category="Entrepreneurship">
+            <img src="img/people/grid/errol-cockfield.jpg" alt="Portrait of Errol Cockfield">
+            <div class="preview-details">
+                <span class="name">Errol<br /> Cockfield</span>
+                <span class="category">Entrepreneurship</span>
+                <span class="view-label arrow-after">View Bio</span>
+            </div>
+        </a>
+        <a href="2014/profile.php?name=brooke-ellison" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Brooke Ellison" data-index="2" data-filename="brooke-ellison" data-year="2014" data-first-name="Brooke" data-last-name="Ellison" data-email="test@email.com" data-category="Education">
+            <img src="img/people/grid/brooke-ellison.jpg" alt="Portrait of Brooke Ellison">
+            <div class="preview-details">
+                <span class="name">Brooke<br /> Ellison</span>
+                <span class="category">Education</span>
+                <span class="view-label arrow-after">View Bio</span>
+            </div>
+        </a>
+        <a href="2014/profile.php?name=arthur-james-goff-iii" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Arthur James Goff III" data-index="3" data-filename="arthur-james-goff-iii" data-year="2014" data-first-name="Arthur James" data-last-name="Goff III" data-email="test@email.com" data-category="Healthcare">
+            <img src="img/people/grid/arthur-james-goff-iii.jpg" alt="Portrait of Arthur James Goff III">
+            <div class="preview-details">
+                <span class="name">Arthur James<br /> Goff III</span>
+                <span class="category">Healthcare</span>
+                <span class="view-label arrow-after">View Bio</span>
+            </div>
+        </a>
+        <a href="2014/profile.php?name=broken-link" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Broken Link Example" data-index="4" data-filename="broken-link" data-year="2014" data-first-name="Broken Link" data-last-name="Example" data-email="test@email.com" data-category="Entrepreneurship">
+            <img src="img/people/grid/alex-bard.jpg" alt="Portrait of Broken Link Example">
+            <div class="preview-details">
+                <span class="name">Broken Link<br /> Example</span>
+                <span class="category">Entrepreneurship</span>
+                <span class="view-label arrow-after">View Bio</span>
+            </div>
+        </a>
+        <a href="2014/profile.php?name=brooke-ellison" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Brooke Ellison" data-index="5" data-filename="brooke-ellison" data-year="2014" data-first-name="Brooke" data-last-name="Ellison" data-email="test@email.com" data-category="Education">
+            <img src="img/people/grid/brooke-ellison.jpg" alt="Portrait of Brooke Ellison">
+            <div class="preview-details">
+                <span class="name">Brooke<br /> Ellison</span>
+                <span class="category">Education</span>
+                <span class="view-label arrow-after">View Bio</span>
+            </div>
+        </a>
+        <a href="2014/profile.php?name=arthur-james-goff-iii" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for Arthur James Goff III" data-index="6" data-filename="arthur-james-goff-iii" data-year="2014" data-first-name="Arthur James" data-last-name="Goff III" data-email="test@email.com" data-category="Healthcare">
+            <img src="img/people/grid/arthur-james-goff-iii.jpg" alt="Portrait of Arthur James Goff III">
+            <div class="preview-details">
+                <span class="name">Arthur James<br /> Goff III</span>
+                <span class="category">Healthcare</span>
+                <span class="view-label arrow-after">View Bio</span>
+            </div>
+        </a>
+        <a href="2014/profile.php?name=d-kivatinos-m-nusimow" class="honoree-box" role="button" tabindex="0" aria-label="View Bio for D. Kivatinos Nusimow" data-index="7" data-filename="d-kivatinos-m-nusimow" data-year="2014" data-first-name="D. Kivatinos &" data-last-name="M. Nusimow" data-email="test@email.com" data-category="Technology">
+            <img src="img/people/grid/d-kivatinos-m-nusimow.jpg" alt="D. Kivatinos & M. Nusimow">
+            <div class="preview-details">
+                <span class="name">D. Kivatinos &amp;<br /> M. Nusimow</span>
+                <span class="category">Technology</span>
+                <span class="view-label arrow-after">View Bio</span>
+            </div>
+        </a>
+        <!-- END Output of People Data -->
     </div>
 
     <div class="overlay bio-overlay">
-        <div class="overlay-controls clearfix">
-            <a href="." class="back overlay-control icon-before grid-icon-before clearfix" data-role="button" aria-label="Back to Nominee List" tabindex="0"><span class="hide-accessible-smaller">Back</span></a>
-            <a href="." class="close overlay-control icon-before dots-icon-before clearfix category-nav-trigger" data-role="button" aria-label="View Categories" tabindex="0"><span class="hide-accessible-smaller">Categories</span></a>
-            <h3 class="category-header stars-around">Civil Service &amp; Activism</h3>
-        </div>
-        <div class="name-detail overlay-wrapper clearfix">
-            <div class="name">Errol YAHOOOOOOOO Cockfield <span class="year">'94</span></div>
-            <div class="social clearfix">
-                <a href="#" class="twitter icon-before twitter-before" target="_blank">@ecockfield</a>
-                <a href="#" class="linkedin icon-before linkedin-before" target="_blank">View profile</a>
-            </div>
-        </div>
-        <div class="bio-detail overlay-wrapper clearfix">
-            <div class="title-detail">
-                <span class="degree">BA English</span>
-                <span class="title">Senior VP, Edelman</span>
-            </div>
-            <div class="bio-image">
-                <img src="img/people/grid/errol-cockfield.jpg" alt="Portrait of Errol Cockfield" />
-                <a href="http://www.youtube.com/watch?v=Z8MhZJqdEKc" class="cta video-trigger nivo-lightbox icon-before play-icon-before" role="button" tabindex="0">Play Video</a>
-            </div>
-            <ul class="bullet-points">
-                <li>Former Press Secretary for New York Governors David Paterson and Elliot Spitzer</li>
-                <li>Former reporter at Newsday and Los Angeles Times</li>
-                <li>Named "City and State’s 40 Under 40" in 2007</li>
-            </ul>
-        </div>
-        <a href="http://www.youtube.com/watch?v=Z8MhZJqdEKc" class="cta video-trigger mobile-video-trigger nivo-lightbox icon-before play-icon-before" role="button" tabindex="0">Play Video</a>
-        <div class="pagination-wrapper clearfix">
-            <a href="." class="back pagination-trigger" data-role="button" aria-label="View previous biography" tabindex="0">
-                <span class="label icon-before">Previous</span>
-                <span class="name">Joshua <br />Palmeri</span>
-            </a>
-            <a href="." class="next pagination-trigger" data-role="button" aria-label="View previous biography" tabindex="0">
-                <span class="label icon-before">Next</span>
-                <span class="name">Lynn<br /> Zawie</span>
-            </a>
-        </div>
+        <!--AJAX loads content here-->
     </div>
 
 </section>
 
 <div class="loader">
-  <div class="ball"></div>
+    <div class="ball"></div>
 </div>
 
 <!-- <category-nav> -->
@@ -214,7 +93,3 @@
         include($path . $file);
     ?>
 <!-- </category-nav> -->
-
-<section class="clearfix no-overflow">
-    QUOTE HERE
-</section>

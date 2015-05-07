@@ -30,14 +30,6 @@
 
         <div class="main-container">
             <div class="main clearfix">
-
-		        <!-- <header> -->
-		        <?php 
-					if($page_footer) {
-						include($path . $footer);
-					}
-				?>
-				<!-- </header> -->
 				        
 		        <div class="content-container">
 		            <div class="content clearfix">
