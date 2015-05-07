@@ -5,7 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<!-- <inc> -->
 		<?php
-    		$inc = $_SERVER['DOCUMENT_ROOT'] . "/40/inc/inc.php";
+			$this_dir = $_SERVER['REQUEST_URI'];
+			$dev_dir = '/development/40/';
+			$is_dev = strpos($this_dir,$dev_dir);
+			if($is_dev !== false) {
+				$inc = $_SERVER['DOCUMENT_ROOT'] . "/development/40/inc/inc.php";
+			} else {
+				$inc = $_SERVER['DOCUMENT_ROOT'] . "/40/inc/inc.php";
+			}
 			include($inc);
 		?>
 	<!-- </inc> -->

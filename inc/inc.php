@@ -108,9 +108,4 @@
     /* Cache busting for newer asset files */
     $filename_based_cache_busting = false;
     include $path . '../includes/filename_based_cache_busting.php';
-
-    //include Perch CMS
-    //$perch_runtime = $root . '/' . $site . 'perch/runtime.php';
-    //include($perch_runtime);                  //Includes the Perch runtime library
-
 ?>
