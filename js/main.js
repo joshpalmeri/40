@@ -168,4 +168,9 @@ $(document).ready(function() {
 		window.open(this.getAttribute('href'), 'newwindow', 'width=950, height=750');
 	});
 
+	$('.submit-nom').on('click',function(e) {
+		e.preventDefault();
+		$('#totop').trigger('click');
+	});
+
 });

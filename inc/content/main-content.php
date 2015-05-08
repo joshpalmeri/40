@@ -21,13 +21,13 @@
     </div>
 </section>
 <section class="nomination-period-notice clearfix">
-    <span><em class="sbuicon-check icon"></em>Nominations now being accepted!</span>
-    <a class="cta arrow-after" href="nominees">Nominate someone today!</a>
+    <span><em class="sbuicon-check icon"></em>Nominations now being accepted<em class="hide-accessible-mobile"> for the 2015 List of Honorees</em>!</span>
+    <a class="cta arrow-after animated-pulse" href="nominees">Nominate someone today!</a>
 </section>
 <section class="honorees-grid-promo clearfix">
-    <h2 class="section-header"><span class="text">The Finalists</span></h2>
+    <h2 class="section-header"><span class="text">The <span class="year">2014</span> Honorees</span></h2>
     <a href="2014" id="panning">
-        <span class="cta arrow-after">View the Honorees</span>
+        <span class="cta arrow-after animated-pulse">View the Honorees</span>
     </a>
 </section>
 
@@ -58,7 +58,7 @@
     <div class="wrap clearfix">
         <p class="text clearfix">Do you know a bright, innovative, entrepreneurial-spirited young graduate who has used their Stony Brook degree to pursue their passions, to help others, and lead positive change?</p>
         <strong>Nominations will be accepted soon!</strong>
-        <!--<strong>Nominate someone today!</strong>-->
+        <strong>Nominate someone today! <a class="arrow-after" href="nominees#guidelines">View guidelines</a></strong>
         <!--<strong>Nominations are closed for 2015.</strong>-->
         <a class="cta cta-outline clearfix arrow-after" href="nominees">Submit Nomination</a>
         <a class="cta cta-outline clearfix arrow-after" href="nominees">View Nominees</a>
@@ -80,12 +80,12 @@
         <div class="news-feed clearfix">
             <h3 class="icon-before">News</h3>
             <ul class="news">
-                <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-                <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-                <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-                <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-                <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-                <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+                <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+                <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+                <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+                <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+                <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+                <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
             </ul>
             <div class="wrap">
                 <a class="cta cta-outline clearfix arrow-after" href="news">Read More News</a>

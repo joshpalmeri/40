@@ -6,7 +6,7 @@
 <!-- </nav> -->
 
 <section class="honorees-grid first-section clearfix">
-    <h2 class="section-header"><span class="text">The <span class="year">2014</span> Finalists</span></h2>
+    <h2 class="section-header"><span class="text">The <span class="year">2014</span> Honorees</span></h2>
     <div class="clearfix isotope">
 
         <div class="honoree-box show-all-trigger" role="button" tabindex="0" aria-label="View All Honorees" data-category="Show All">

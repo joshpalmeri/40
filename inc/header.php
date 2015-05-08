@@ -5,12 +5,13 @@
         <title><?php echo $page_title_full; ?></title>
 
         <meta name="author" content="<?php echo $author_name; ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
         <meta name="description" content="<?php echo $description; ?>">
         <meta name="keywords" content="<?php echo $page_keywords; ?>">
         <?php if(!$detect_phone_num) { ?>
             <meta name="format-detection" content="telephone=no">
         <?php } ?>
+        <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!--BEGIN Open Graph Meta Tags-->
     <!--See http://davidwalsh.name/facebook-meta-tags-->

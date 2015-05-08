@@ -169,6 +169,8 @@ nav.home .trigger-label {
 	text-align: center;
 	padding: 14px 0;
 	cursor: pointer;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-weight: normal;
 }
 
 .category-nav h3:focus,
@@ -184,7 +186,7 @@ nav.home .trigger-label {
     display: inline-block;
     width: 50%;
     float: left;
-    height: 60px;
+    height: 52px;
 }
 
 .category-nav button {
@@ -194,6 +196,9 @@ nav.home .trigger-label {
     border-right: 1px solid #800;
     font-size: .9em;
     height: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+	font-weight: normal;
+	padding: 5px 20px;
 }
 
 .category-nav button:active,
@@ -295,6 +300,26 @@ nav.home .trigger-label {
 @media only screen and (min-width: 540px) {
 	.archive-nav a {
 		width: 33.333%;
+	}
+
+	.category-nav li {
+		height: 60px;
+	}
+
+	.category-nav button {
+		padding: 10px 20px;
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 680px) {
+	.category-nav li {
+		height: 68px;
+	}
+
+	.category-nav button {
+		padding: 14px 20px;
+		font-size: 1.2em;
 	}
 }
 
@@ -422,6 +447,7 @@ nav.home .trigger-label {
 	    padding: 20px 45px;
 	    text-align: left;
 	    z-index: 10;
+	    -webkit-font-smoothing: subpixel-antialiased;
     }
 
     .archive-nav .years {
@@ -575,6 +601,7 @@ nav.home .trigger-label {
 	    box-sizing: border-box;
     	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
 	    opacity: .6;
+	    font-size: 0.9em;
 	}
 
 	.category-nav button:focus {
@@ -606,6 +633,7 @@ nav.home .trigger-label {
 	    -o-transition: opacity .2s ease-in-out;
 	    transition: opacity .2s ease-in-out;
 	    padding-right: 10px;
+	    -webkit-font-smoothing: subpixel-antialiased;
 	}
 
 	.category-nav:hover button:before {

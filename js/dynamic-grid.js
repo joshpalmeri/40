@@ -338,4 +338,7 @@ $(window).load(function(){
 		$('.category-nav').css('display','none');
 	}
 
+	// trigger resize event to fix faux black borders
+	$('.isotope').isotope();
+
 });

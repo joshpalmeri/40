@@ -88,6 +88,23 @@ textarea {
 
 /* Reusable styles */
 
+.animated-pulse {
+    -webkit-animation-name: 'pulse_animation';
+    -webkit-animation-duration: 5000ms;
+    -webkit-animation-delay: 3s;
+    -webkit-transform-origin: 70% 70%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+}
+
+@-webkit-keyframes pulse_animation {
+    0% { -webkit-transform: scale(1); }
+    37% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.1); }
+    63% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(1); }
+}
+
 .border-shadow {
     border-bottom: 1px solid #444444;
     border-top: 1px solid #444444;
@@ -613,7 +630,8 @@ table.tablesaw .tablesaw-cell-label {
     color: #fff;
 }
 
-.cta.view-gallery {
+.cta.view-gallery,
+.cta.submit-nom {
     width: 170px;
     text-align: center;
     margin: 0 auto;
@@ -683,7 +701,6 @@ table.tablesaw .tablesaw-cell-label {
     content: "\f099";
     font-size: 1.1em;
     line-height: 0;
-    display: inline-block;
     margin: 0 6px 0 -6px;
 }
 
@@ -692,7 +709,6 @@ table.tablesaw .tablesaw-cell-label {
     content: "\f0e1";
     font-size: 1.1em;
     line-height: 0;
-    display: inline-block;
     margin: 0 6px 0 -6px;
 }
 
@@ -801,6 +817,7 @@ h2.section-header .text {
     text-rendering: optimizeLegibility;
     position: relative;
     z-index: 2;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 
@@ -952,7 +969,7 @@ h2.section-header:after {
 }
 
 .attend-the-event .cta {
-    margin: 15px auto 50px;
+    margin: 15px auto 20%;
 }
 
 /* Tweet This */
@@ -1049,6 +1066,21 @@ h2.section-header:after {
     text-rendering: optimizeLegibility;
 }
 
+.text-wrapper {
+    font-family: 'Trade Gothic Next W01', Arial, sans-serif;
+    font-size: 1em;
+}
+
+.text-wrapper strong {
+    font-weight: normal;
+    font-family: 'Trade Gothic W01 Bold 2';
+}
+
+.text-wrapper em {
+    font-family:'TradeGothicNextW02-Ital';
+    font-style: normal;
+}
+
 .nominations-promo p,
 .inside-page p.text {
     display: block;
@@ -1094,6 +1126,18 @@ h2.section-header:after {
     font-size: 1.4em;
     line-height: 1.4em;
     margin: 0 0 1.1em;
+}
+
+.nominations-promo strong a {
+    font-family: 'Trade Gothic W01 Bold 2';
+    color: #900;
+    text-decoration: none;
+    word-wrap: nowrap;
+    display: inline-block;
+}
+
+.nominations-promo strong a:hover {
+    text-decoration: underline;
 }
 
 .nominations-promo .cta {
@@ -1267,17 +1311,29 @@ h2.section-header:after {
     float: left;
 }
 
-.tweets-and-news .news a strong {
-    width: 20%;
-}
-
 .tweets-and-news .news a span {
-    width: 80%;
+    width: 84%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .tweets-and-news .news a strong {
+    width: 16%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
     color: #900;
     font-family:'Trade Gothic W01 Bold 2';
+    font-size: 1.2em;
+    padding: 4px 6px 0 0;
+    color: #000;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
 }
 
 .tweets-and-news .news a:hover {
@@ -1308,7 +1364,7 @@ h2.section-header:after {
     margin: 0 0 0 6px;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     opacity: 0;
-    color: #a00;
+    color: #900;
 }
 
 
@@ -1412,7 +1468,7 @@ h2.section-header:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
-    padding: 28px 10px 30px;
+    padding: 28px 10px 34px;
     color: #fff;
     background: url("../img/background/az-subtle.png") repeat 0 0 scroll #5F0202;
     border-top: 1px solid #540000;
@@ -1423,7 +1479,12 @@ h2.section-header:after {
     font-family: 'CenturySchlbkW15-Italic';
     font-size: 1.4em;
     display: block;
-    margin: 0 0 20px;
+    margin: 0 0 18px;
+    line-height: 1.4em;
+}
+
+.nomination-period-notice span em {
+    font-style: normal;
 }
 
 .nomination-period-notice .icon {
@@ -1525,6 +1586,10 @@ footer span a {
         width: 2000px;
         height: 2000px;
     }
+
+    .marquee .quote {
+        display: none !important;
+    }
 }
 
 @media only screen and (min-width: 400px) {
@@ -1561,7 +1626,7 @@ footer span a {
         display: block;
         width: 88%;
         margin: 0 6%;
-        padding: 3.2em 0 65%;
+        padding: 5.2em 0 65%;
     }
 
 
@@ -1608,7 +1673,7 @@ footer span a {
 
     footer span {
         font-size: 1.2em;
-
+    }
 }
 
 @media only screen and (min-width: 480px) {
@@ -1631,11 +1696,11 @@ footer span a {
 
 @media only screen and (min-width: 520px) {
     .tweets-and-news .news a strong {
-        width: 16%;
+        width: 10%;
     }
 
     .tweets-and-news .news a span {
-        width: 84%;
+        width: 90%;
     }
 }
 
@@ -1823,7 +1888,7 @@ footer span a {
     .nominations-promo .wrap {
         width: 84%;
         margin: 0 8%;
-        padding: 4em 0 65%;
+        padding: 6em 0 65%;
     }
 
     .contact {
@@ -1838,11 +1903,11 @@ footer span a {
     }
 
     .tweets-and-news .news a strong {
-        width: 12%;
+        width: 8%;
     }
 
     .tweets-and-news .news a span {
-        width: 88%;
+        width: 92%;
     }
 }
 
@@ -1999,6 +2064,20 @@ footer span a {
         top: 102px;
     }
 
+    .nomination-period-notice {
+        padding: 5% 10px 5.5%;
+        color: #fff;
+        background: url("../img/background/az-subtle.png") repeat 0 0 scroll #4D0000;
+        border-top: 1px solid #540000;
+        border-bottom: 1px solid #540000;
+        font-size: 1.2em;
+    }
+
+    .nomination-period-notice span {
+        font-size: 1.6em;
+        margin: 0 0 40px;
+    }
+
     .attend-the-event h2 {
         font-size: 2.2em;
         background: #000;
@@ -2079,7 +2158,7 @@ footer span a {
     .nominations-promo .wrap {
         width: 100%;
         margin: 0 auto;
-        padding: 4em 4em 33% 10%;
+        padding: 7em 4em 33% 10%;
     }
 
     .nominations-promo .text {
@@ -2146,11 +2225,11 @@ footer span a {
     }
 
     .tweets-and-news .news a strong {
-        width: 18%;
+        width: 13%;
     }
 
     .tweets-and-news .news a span {
-        width: 82%;
+        width: 87%;
     }
 
     .tweets-and-news .cta {
@@ -2195,8 +2274,9 @@ footer span a {
     }
 
     .inside-page.news a strong {
-        width: 10%;
+        width: 6%;
         margin-left: 16%;
+        padding: 2px 0;
 
     }
 
@@ -2305,7 +2385,7 @@ footer span a {
     }
 
     .nominations-promo .wrap {
-        padding: 4em 4em 15% 10%;
+        padding: 8em 4em 24% 10%;
     }
 
     .event-gallery h3 {

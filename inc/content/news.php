@@ -3,12 +3,12 @@
     <div class="container wrapper tweets-and-news">
         <p class="text clearfix">See how Stony Brook Alumni are making headlines in current news.</p>
         <ul class="news">
-            <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-            <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-            <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-            <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-            <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
-            <li><a class="clearfix" href="#"><strong>1/16/15</strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+            <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+            <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+            <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+            <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+            <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
+            <li><a class="clearfix" href="#"><strong><em class="sbuicon-newspaper"></em></strong> <span>SBU Student Neha Kinariwalla Makes Forbes 30 Under 30 List</span></a></li>
         </ul>
     </div>
 </section>

@@ -22,7 +22,7 @@
 
 .nivo-lightbox-theme-default.nivo-lightbox-overlay {
 	background: #222;
-	background: rgba(0,0,0,0.9);
+	background: rgba(0,0,0,0.95);
 }
 
 .nivo-lightbox-theme-default .nivo-lightbox-close {
@@ -67,10 +67,10 @@
 
 .nivo-lightbox-wrap {
 	position: absolute;
-	top: 1%;
-	bottom: 1%;
-	left: 1%;
-	right: 1%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .nivo-lightbox-content {
@@ -79,6 +79,10 @@
 	padding-top: 0;
 	height: 100%;
 	margin: 0;
+	max-width: 720px;
+	margin: 0 auto;
+	-webkit-overflow-scrolling: touch;
+	overflow-y: scroll;
 }
 
 .nivo-lightbox-content iframe {
@@ -98,13 +102,54 @@
 	color: #900;
 }
 
+.nomination-guidelines {
+	background: #fff;
+	padding: 60px 0;
+	font-size: 1em;
+}
+
+.nomination-guidelines .container {
+	margin: 7% 10%;
+	width: 80%;
+}
+
+.nomination-guidelines h3,
+.nomination-guidelines h4 {
+	font-weight: normal;
+    font-family: 'Trade Gothic W01 Bold 2';
+    color: #000;
+}
+
+.nomination-guidelines li {
+	margin: 8px 0;
+}
+
+.nomination-guidelines h3 {
+	font-size: 1.3em;
+}
+
+.nomination-guidelines h4 {
+	font-size: 1.1em;
+}
+
+.nomination-guidelines ul,
+.nomination-guidelines p {
+	font-size: 1.1em;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 0px) and (max-width: 959px) {
     
 }
 
 @media only screen and (min-width: 400px) {
-    
+    .nomination-guidelines .container {
+    	font-size: 1.3em;
+    }
+
+    .nomination-guidelines .cta {
+    	font-size: 2em;
+    }
 }
 
 @media only screen and (min-width: 540px) {
@@ -122,15 +167,21 @@
 @media only screen and (min-width: 720px) {
 	.nivo-lightbox-wrap {
 		position: absolute;
-		top: 5%;
+		top: 4%;
 		bottom: 5%;
-		left: 4%;
-		right: 4%;
+		left: 6%;
+		right: 6%;
 	}
 }
 
 @media only screen and (min-width: 860px) {
-    
+    .nivo-lightbox-wrap {
+		position: absolute;
+		top: 4%;
+		bottom: 5%;
+		left: 6%;
+		right: 6%;
+	}
 }
 
 @media only screen and (min-width: 960px) {
@@ -150,14 +201,31 @@
 		box-sizing: border-box;
 	}
 
+	.nivo-lightbox-wrap {
+		position: absolute;
+		top: 4%;
+		bottom: 5%;
+		left: 12%;
+		right: 12%;
+	}
+
 }
 
 @media only screen and (min-width: 1024px) {
-    
+   	.nomination-guidelines .container {
+		width: 960px;
+		margin: 60px auto;
+	}
 }
 
 @media only screen and (min-width: 1140px) {
-
+	.nivo-lightbox-wrap {
+		position: absolute;
+		top: 4%;
+		bottom: 5%;
+		left: 16%;
+		right: 16%;
+	}
 }
 
 @media only screen and (min-width: 1920px) {

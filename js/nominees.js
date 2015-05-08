@@ -46,7 +46,25 @@ function buildEndorsementLink(item) {
 
 $(document).ready(function() {
 
-	$('body').scrollTo( '0', 0 );
+	//if the page is loaded with a hash in URL
+	var hash = window.location.hash;
+	if(hash!=='' && hash!='null' && hash!==null && hash!=='0' && hash!=='*') {
+		var urlPath = hash.substring(1,hash.length);
+		var useOffset = 0;
+		if($(window).width()>=960) {
+			useOffset = $('header').outerHeight();
+		} else {
+			useOffset = $('.mobile-nav-bar').outerHeight();
+		}
+
+		$('body').scrollTo( hash, 800, {
+			axis:'y',
+			easing: 'easeOutQuart',
+			offset: -useOffset
+		});
+	} else {
+		$('body').scrollTo( '0', 0 );
+	}
 
 	$('.nivo-lightbox').nivoLightbox({
 		afterShowLightbox: function(lightbox) {
