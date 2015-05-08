@@ -6,12 +6,13 @@
 	<!-- <inc> -->
 		<?php
 			$this_dir = $_SERVER['REQUEST_URI'];
-			$dev_dir = '/development/40/';
+			$dev_dir  = '/development/40/';
+			$prod_dir = '/40/';
 			$is_dev = strpos($this_dir,$dev_dir);
 			if($is_dev !== false) {
-				$inc = $_SERVER['DOCUMENT_ROOT'] . "/development/40/inc/inc.php";
+				$inc = $_SERVER['DOCUMENT_ROOT'] . $dev_dir . "inc/inc.php";
 			} else {
-				$inc = $_SERVER['DOCUMENT_ROOT'] . "/40/inc/inc.php";
+				$inc = $_SERVER['DOCUMENT_ROOT'] . $prod_dir . "inc/inc.php";
 			}
 			include($inc);
 		?>
