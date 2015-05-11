@@ -22,6 +22,7 @@
 			$page_type = 'home';
 		    $main_nav_selected = 0;
 		    $motio = true;
+		    $program_year = '2014';
 		?>
 
 	<!-- <head> -->

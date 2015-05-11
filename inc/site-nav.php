@@ -16,8 +16,8 @@
             <li class="archive-nav open">
                 <div class="years clearfix">
                     <span class="label"><span class="hide-on-desktop">Archive by </span>Year:</span>
-                    <a<?php if($archive_year=='2015') { ?> class="selected"<?php } ?> href="2015">2015</a>
-                    <a<?php if($archive_year=='2014') { ?> class="selected"<?php } ?> href="2014">2014</a>
+                    <a<?php if($program_year=='2015') { ?> class="selected"<?php } ?> href="2015">2015</a>
+                    <a<?php if($program_year=='2014') { ?> class="selected"<?php } ?> href="2014">2014</a>
                 </div>
                 <div class="social clearfix">
                     <span class="label">Share on:</span>

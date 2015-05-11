@@ -21,7 +21,7 @@
 		<?php
 			$page_type = 'honorees';
 		    $main_nav_selected = 1;
-		    $archive_year = '2014';
+		    $program_year = '2014';
 		    $profile_grid = true;
 		    $motio = false;
 		    $page_footer = false;
@@ -47,7 +47,7 @@
 
 		                <!-- <main-content> -->
 							<?php
-								$file = "2014.php";
+								$file = $program_year . ".php";
 								include($path . $content . $file);
 							?>
 						<!-- </main-content> -->

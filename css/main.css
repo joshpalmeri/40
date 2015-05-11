@@ -1,8 +1,8 @@
 /* 
    File: main.css
    Starting point: HTML5 Boilerplate, h5bp.com
-   Modified by: Josh Palmeri, joshpalmeri.com
-   2014.03.14
+   Development by: Josh Palmeri, Stony Brook University, NY
+   20145.05.11
 /*
 
 /* ==========================================================================
@@ -841,7 +841,7 @@ h2.section-header:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
-    z-index: 9;
+    z-index: 8;
     background: url("../img/background/edison-ballroom-mobile-1.jpg") repeat scroll 0 0;
     background-size: cover;
     background-position: 50% 50%;

@@ -171,7 +171,7 @@
 	    	<?php includeAsset('js','js/elements/owl-carousel/owl.carousel.js'); ?>
 	    <?php } ?>
 
-	    <?php includeAsset('js','js/custom-feeds.js'); ?>        
+	    <?php includeAsset('js','js/custom-feeds.js'); ?>
 
         <!-- window.load() -->
         <script type="text/javascript">

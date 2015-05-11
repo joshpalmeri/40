@@ -22,6 +22,7 @@
 			$page_type = 'nominees';
 			$tablesaw = true;
 		    $main_nav_selected = 3;
+		    $program_year = '2014';
 		?>
 
 	<!-- <head> -->

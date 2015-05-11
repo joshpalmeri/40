@@ -25,7 +25,7 @@
     <a class="cta arrow-after animated-pulse" href="nominees">Nominate someone today!</a>
 </section>
 <section class="honorees-grid-promo clearfix">
-    <h2 class="section-header"><span class="text">The <span class="year">2014</span> Honorees</span></h2>
+    <h2 class="section-header"><span class="text">The <span class="year"><?php echo $program_year; ?></span> Honorees</span></h2>
     <a href="2014" id="panning">
         <span class="cta arrow-after animated-pulse">View the Honorees</span>
     </a>
@@ -57,9 +57,9 @@
 <section id="nomination" class="nominations-promo">
     <div class="wrap clearfix">
         <p class="text clearfix">Do you know a bright, innovative, entrepreneurial-spirited young graduate who has used their Stony Brook degree to pursue their passions, to help others, and lead positive change?</p>
-        <strong>Nominations will be accepted soon!</strong>
-        <strong>Nominate someone today! <a class="arrow-after" href="nominees#guidelines">View guidelines</a></strong>
-        <!--<strong>Nominations are closed for 2015.</strong>-->
+        <!--<strong class="accepted-soon">Nominations will be accepted soon!</strong>-->
+        <strong class="nominate-today">Nominate someone today! <a class="arrow-after" href="nominees#guidelines">View guidelines</a></strong>
+        <!--<strong class="nominations-are-closed">Nominations are closed for 2015.</strong>-->
         <a class="cta cta-outline clearfix arrow-after" href="nominees">Submit Nomination</a>
         <a class="cta cta-outline clearfix arrow-after" href="nominees">View Nominees</a>
     </div>
@@ -94,7 +94,7 @@
     </div>
 </section>
 
-<section class="event-gallery clearfix">
+<section class="event-gallery clearfix" data-flickr-id="72157649295457517">
     <div class="border-box">
         <h3>2014 Event Gallery</h3>
         <div class="carousel-wrapper">

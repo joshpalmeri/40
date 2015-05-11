@@ -22,7 +22,7 @@
 			$page_type = 'honorees';
 			$profile_page = true;
 		    $main_nav_selected = 1;
-		    $archive_year = '2014';
+		    $program_year = '2014';
 		    $page_footer = false;
 		?>
 
@@ -57,7 +57,7 @@
 							    <!-- <profile data> -->
 								    <?php
 								        
-								    if(!@include($root . "/" . $site . "/2014/people/".$_GET["name"].".php")) {
+								    if(!@include($root . "/" . $site . "/" . $program_year . "/people/".$_GET["name"].".php")) {
 								    	include($path . $content . "default-profile.php");
 								    } 
 								    ?>

@@ -1,5 +1,5 @@
 <section id="#nomination" class="inside-page nominees clearfix">
-    <h2 class="section-header"><span class="text">The <span class="year">2014</span> Nominees</span></h2>
+    <h2 class="section-header"><span class="text">The <span class="year"><?php echo $program_year; ?></span> Nominees</span></h2>
     <div class="container wrapper">
         <p class="text clearfix">You can <strong>endorse</strong> someone who has already been nominated in the list below, or <a class="nivo-lightbox form-trigger general-trigger" data-lightbox-type="iframe" href="https://docs.google.com/forms/d/14Ych2m8L9CtDJ4Uzt539isdc2xktT1g3u_vZVyOukyM/viewform?embedded=true">nominate a new candidate</a>.</p>
         <table class="tablesaw tablesaw-stack light-grey-table" data-tablesaw-mode="stack" border="0" cellpadding="0" cellspacing="0">

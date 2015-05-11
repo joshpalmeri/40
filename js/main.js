@@ -76,7 +76,7 @@ function appendNextAndPrevNavigation(item) {
 		prevItemDetails.lastName = prevItem.attr('data-last-name');
 		console.log(prevItemDetails);
 
-		var prevLinkHTML = '<a href="." class="back pagination-trigger" data-role="button" aria-label="View previous biography for '+prevItemDetails.firstName+' <br>'+prevItemDetails.lastName+'" data-direction="back" tabindex="0">';
+		var prevLinkHTML = '<a href="." class="back pagination-trigger" role="button" aria-label="View previous biography for '+prevItemDetails.firstName+' <br>'+prevItemDetails.lastName+'" data-direction="back" tabindex="0">';
 		prevLinkHTML += '<span class="label icon-before">Previous</span>';
 		prevLinkHTML += '<span class="name">'+prevItemDetails.firstName+' <br>'+prevItemDetails.lastName+'</span>';
 		prevLinkHTML += '</a>';
@@ -94,7 +94,7 @@ function appendNextAndPrevNavigation(item) {
 		nextItemDetails.lastName = nextItem.attr('data-last-name');
 		console.log(nextItemDetails);
 
-		var nextLinkHTML = '<a href="." class="next pagination-trigger" data-role="button" aria-label="View nect biography for '+nextItemDetails.firstName+' <br>'+nextItemDetails.lastName+'" data-direction="next" tabindex="0">';
+		var nextLinkHTML = '<a href="." class="next pagination-trigger" role="button" aria-label="View nect biography for '+nextItemDetails.firstName+' <br>'+nextItemDetails.lastName+'" data-direction="next" tabindex="0">';
 		nextLinkHTML += '<span class="label icon-before">Next</span>';
 		nextLinkHTML += '<span class="name">'+nextItemDetails.firstName+' <br>'+nextItemDetails.lastName+'</span>';
 		nextLinkHTML += '</a>';

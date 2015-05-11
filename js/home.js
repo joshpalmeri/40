@@ -97,7 +97,11 @@ function showTheQuote() {
 $(document).ready(function() {
 
 	// Set up event gallery
-	getImgs("72157649295457517");
+	var flickrSetId = $('.event-gallery').attr('data-flickr-id');
+	if(flickrSetId==='' || flickrSetId=='null' || flickrSetId===null || flickrSetId==='0') {
+		flickrSetId = '72157649295457517';
+	}
+	getImgs(flickrSetId);
 
 	/* navigation waypoints */
 	var $archiveNav = $('.archive-nav');

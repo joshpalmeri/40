@@ -1,13 +1,13 @@
 <div class="overlay bio-overlay">
     <div class="overlay-controls clearfix">
-        <a href="2014" class="back overlay-control icon-before grid-icon-before clearfix" data-role="button" aria-label="Back to Nominee List" tabindex="0"><span class="hide-accessible-smaller">Back</span></a>
-        <a href="." class="category overlay-control icon-before dots-icon-before clearfix category-nav-trigger" data-role="button" aria-label="View Categories" tabindex="0"><span class="hide-accessible-smaller">Categories</span></a>
+        <a href="<?php echo $program_year; ?>" class="back overlay-control icon-before grid-icon-before clearfix" role="button" aria-label="Back to Nominee List" tabindex="0"><span class="hide-accessible-smaller">Back</span></a>
+        <a href="<?php echo $program_year; ?>" class="category overlay-control icon-before dots-icon-before clearfix category-nav-trigger" role="button" aria-label="View Categories" tabindex="0"><span class="hide-accessible-smaller">Categories</span></a>
         <h3 class="category-header stars-around" data-category="Entrepreneurship" role="button" tabindex="0" label="View all honorees in Entrepreneurship">Entrepreneurship</h3>
     </div>
     <div class="name-detail overlay-wrapper clearfix">
-        <div class="name">Errol Cockfield <span class="year">'94</span></div>
+        <div class="name">Errol Cockfield <span class="year">&#8217;94</span></div>
         <div class="social clearfix">
-            <a href="#" class="twitter icon-before twitter-before" target="_blank">@ecockfield</a>
+            <a href="http://twitter.com/ecockfield" class="twitter icon-before twitter-before" target="_blank">@ecockfield</a>
             <a href="#" class="linkedin icon-before linkedin-before" target="_blank">View profile</a>
         </div>
     </div>

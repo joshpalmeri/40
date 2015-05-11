@@ -1,4 +1,3 @@
-<!-- add class show to show the category nav overlay-->
 <div class="filters category-nav category-nav-sticky">
     <h3 class="stars-around hide-accessible-desktop" role="button" tabindex="0">Select a Category</h3>
     <ul class="clearfix">
@@ -16,5 +15,5 @@
         <li><button data-filter="Technology">Technology</button></li>
         <li><button data-filter="Writers & Media">Writers &amp; Media</button></li>
     </ul>
-    <a href="2014" class="close overlay-control icon-before close-icon-before clearfix" data-role="button" aria-label="Close Category Navigation" tabindex="0"><span class="hide-accessible">Close</span></a>
+    <a href="<?php echo $program_year; ?>" class="close overlay-control icon-before close-icon-before clearfix" role="button" aria-label="Close Category Navigation" tabindex="0"><span class="hide-accessible">Close</span></a>
 </div>
